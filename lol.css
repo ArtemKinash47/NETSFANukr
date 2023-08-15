@@ -1,0 +1,97 @@
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Borough', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(to bottom, #4e54c8, #8f94fb);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    max-height: 80px;
+    transition: transform 0.3s;
+}
+
+header img:hover {
+    transform: scale(1.1) rotate(360deg);
+}
+
+.toggle-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#toggle-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+#latestnews.collapsed {
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    transition: color 0.3s;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: #ff6b6b;
+}
+
+/* Main Content styles */
+#home {
+    padding: 2rem;
+    background-color: white;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#home h2 {
+    font-size: 24px;
+    margin-top: 1rem;
+    color: #4e54c8; /* Customize the color */
+}
+
+#home p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Footer styles */
+footer {
+    background: linear-gradient(to bottom, #4e54c8, #8f94fb);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
