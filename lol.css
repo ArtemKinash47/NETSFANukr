@@ -14,7 +14,7 @@ body {
 
 /* Header styles */
 header {
-    background: linear-gradient(to bottom, #4e54c8, #8f94fb);
+    background: linear-gradient(to bottom, #333, #000000);
     color: white;
     display: flex;
     justify-content: space-between;
@@ -65,7 +65,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ff6b6b;
+    color: #c0c0c0;
 }
 
 /* Main Content styles */
