@@ -199,7 +199,7 @@ footer {
 
 @media (max-width: 1080px) {
     body {
-        font-size: 10px; /* Adjust font size for readability */
+        font-size: 5px; /* Adjust font size for readability */
     }
     
     .player-tab {
@@ -216,7 +216,7 @@ footer {
 @media (max-width: 720px) {
     /* Adjust styles for screens up to 720px width (portrait orientation) */
     body {
-        font-size: 8px; /* Further adjust font size for smaller screens */
+        font-size: 4px; /* Further adjust font size for smaller screens */
     }
     
     .player-tab {
