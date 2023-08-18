@@ -118,36 +118,40 @@
         }
 
         @media (max-width: 1080px) {
-    body {
-        font-size: 3px; /* Adjust font size for readability */
-    }
-    
-    .player-tab {
-        padding: 20px; /* Increase padding for larger tab */
-    }
-    
-    .front,
-    .back {
-        width: 90%; /* Adjust width for better balance */
-        padding: 20px;
-    }
-}
+            body {
+                font-size: 16px; /* Adjust font size for readability */
+            }
+            
+            .player-tab {
+                padding: 40px; /* Increase padding for larger tab */
+            }
+            
+            .front,
+            .back {
+                width: 70%; /* Adjust width for better balance */
+                padding: 40px;
+            }
+            
+            /* Add more specific styles for smaller screens as needed */
+        }
 
-@media (max-width: 720px) {
-    /* Adjust styles for screens up to 720px width (portrait orientation) */
-    body {
-        font-size: 2px; /* Further adjust font size for smaller screens */
-    }
-    
-    .player-tab {
-        padding: 20px; /* Adjust padding for smaller screens */
-    }
-    
-    .front,
-    .back {
-        width: 80%; /* Adjust width for smaller screens */
-        padding: 10px;
-    }
+        /* Additional media queries for landscape orientation or other breakpoints */
+        @media (max-width: 720px) {
+            /* Adjust styles for screens up to 720px width (portrait orientation) */
+            body {
+                font-size: 14px; /* Further adjust font size for smaller screens */
+            }
+            
+            .player-tab {
+                padding: 30px; /* Adjust padding for smaller screens */
+            }
+            
+            .front,
+            .back {
+                width: 80%; /* Adjust width for smaller screens */
+                padding: 30px;
+            }
+            
     
     /* Add more specific styles for smaller screens as needed */
 }
