@@ -18,24 +18,7 @@
         }
 
         /* Style the player tab */
-        .player-tab {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Style the front and back of the card */
-        .front,
-        .back {
-            width: 800px;
-            /* Increase the width to make the front larger */
-            padding: 20px;
-            border: 1px solid #ccc;
-            margin: 10px;
-            background-color: white;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-        }
-
+        
         /* Style the player picture */
         .player-picture {
             max-width: 100%;
@@ -110,6 +93,42 @@
             margin-bottom: 10px;
             /* Add some space below the jersey number */
         }
+
+       
+        /* Your custom styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Rest of your styles */
+
+        /* Modify styles for better readability and aesthetics */
+        .player-profile {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .player-tab {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px; /* Increase padding for larger tab */
+            border: 1px solid #ccc;
+            background-color: white;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .front,
+        .back {
+            width: 60%; /* Adjust width for better balance */
+            padding: 40px;
+        }
+
+        /* Adjust other styles as needed */
+    
     </style>
 </head>
 
@@ -118,24 +137,28 @@
         <a href="index.html">
             <img src="logo.png" alt="NETSFanUKR Logo">
         </a>
-        <nav>
-            <li><a href="index.html"></a></li>
-        </nav>
-        <h1>NETSFanUKR</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Головна сторінка</a></li>
-                <li><a href="news.html">Новини</a></li>
-                <li><a href="players.html">Гравці</a></li>
-                <li><a href="gallery.html">Галерея</a></li>
-                <li><a href="contact.html">Контакт</a></li>
-            </ul>
-        </nav>
+        <h1>NETSFANUKR</h1> <!-- Add the NETSFANUKR text -->
+        <button id="menu-button">Open Menu</button>
     </header>
+
+    <div id="slide-menu">
+        <button id="close-button">Close</button>
+        <ul>
+            <li><a href="index.html">Головна сторінка</a></li>
+            <li><a href="news.html">Новини</a></li>
+            <li><a href="players.html">Гравці</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+        </ul>
+    </div>
 
     <section class="player-profile">
         <div class="player-tab">
-
+            <div class="front">
+                <span class="jersey-number">00</span>
+                <img class="player-picture" src="royceprofile.png" alt="Royce O'Neal">
+                <h3 class="player-name">Ройс О'Ніл</h3>
+            </div>
             <div class="back">
                 <h3 class="player-name">Ройс О'Ніл</h3>
                 <p><strong>Позиція:</strong>  Тяжкий форвард</p>
@@ -219,11 +242,7 @@
                     <!-- Add more social media links here -->
                 </ul>
             </div>
-            <div class="front">
-                <span class="jersey-number">00</span>
-                <img class="player-picture" src="royceprofile.png" alt="Royce O'Neal">
-                <h3 class="player-name">Ройс О'Ніл</h3>
-            </div>
+            
         </div>
     </section>
 
@@ -231,5 +250,17 @@
         <p>&copy; 2023 NETSFanUKR. All rights reserved.</p>
     </footer>
 </body>
+<script>
+    const slideMenu = document.getElementById('slide-menu');
+    const menuButton = document.getElementById('menu-button');
+    const closeButton = document.getElementById('close-button');
 
+    menuButton.addEventListener('click', () => {
+        slideMenu.style.right = '0';
+    });
+
+    closeButton.addEventListener('click', () => {
+        slideMenu.style.right = '-320px';
+    });
+</script>
 </html>

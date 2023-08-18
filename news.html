@@ -62,20 +62,20 @@
         <a href="index.html">
             <img src="logo.png" alt="NETSFanUKR Logo">
         </a>
-        <nav>
-            <li><a href="index.html"></a></li>
-        </nav>
-        <h1>NETSFanUKR</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Головна сторінка</a></li>
-                <li><a href="news.html">Новини</a></li>
-                <li><a href="players.html">Гравці</a></li>
-                <li><a href="gallery.html">Галерея</a></li>
-                <li><a href="contact.html">Контакт</a></li>
-            </ul>
-        </nav>
+        <h1>NETSFANUKR</h1> <!-- Add the NETSFANUKR text -->
+        <button id="menu-button">Open Menu</button>
     </header>
+
+    <div id="slide-menu">
+        <button id="close-button">Close</button>
+        <ul>
+            <li><a href="index.html">Головна сторінка</a></li>
+            <li><a href="news.html">Новини</a></li>
+            <li><a href="players.html">Гравці</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+        </ul>
+    </div>
 
     <section id="news">
         <h2> News</h2>
@@ -487,5 +487,19 @@
         <p>&copy; 2023 NETSFanUKR. All rights reserved.</p>
     </footer>
 </body>
+
+<script>
+    const slideMenu = document.getElementById('slide-menu');
+    const menuButton = document.getElementById('menu-button');
+    const closeButton = document.getElementById('close-button');
+
+    menuButton.addEventListener('click', () => {
+        slideMenu.style.right = '0';
+    });
+
+    closeButton.addEventListener('click', () => {
+        slideMenu.style.right = '-320px';
+    });
+</script>
 
 </html>
