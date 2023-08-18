@@ -199,7 +199,7 @@ footer {
 
 @media (max-width: 1080px) {
     body {
-        font-size: 5px; /* Adjust font size for readability */
+        font-size: 3px; /* Adjust font size for readability */
     }
     
     .player-tab {
@@ -208,7 +208,7 @@ footer {
     
     .front,
     .back {
-        width: 50%; /* Adjust width for better balance */
+        width: 90%; /* Adjust width for better balance */
         padding: 20px;
     }
 }
@@ -216,7 +216,7 @@ footer {
 @media (max-width: 720px) {
     /* Adjust styles for screens up to 720px width (portrait orientation) */
     body {
-        font-size: 4px; /* Further adjust font size for smaller screens */
+        font-size: 2px; /* Further adjust font size for smaller screens */
     }
     
     .player-tab {
@@ -225,7 +225,7 @@ footer {
     
     .front,
     .back {
-        width: 50%; /* Adjust width for smaller screens */
+        width: 80%; /* Adjust width for smaller screens */
         padding: 10px;
     }
     
