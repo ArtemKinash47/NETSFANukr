@@ -208,7 +208,7 @@ footer {
     
     .front,
     .back {
-        width: 70%; /* Adjust width for better balance */
+        width: 50%; /* Adjust width for better balance */
         padding: 20px;
     }
 }
@@ -225,7 +225,7 @@ footer {
     
     .front,
     .back {
-        width: 80%; /* Adjust width for smaller screens */
+        width: 50%; /* Adjust width for smaller screens */
         padding: 10px;
     }
     
