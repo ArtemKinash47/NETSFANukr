@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NETSFANUKR</title>
     <style>
-        body {
+         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -64,6 +64,22 @@
         /* Themed background color */
         .themed-bg {
             background-color: #1d1d1d; /* Brooklyn Nets blue */
+        }
+
+        /* Responsive adjustments for Samsung Galaxy M31 */
+        @media screen and (max-width: 600px) {
+            nav {
+                flex-wrap: wrap;
+                padding: 5px 0;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .container {
+                padding: 10px;
+            }
         }
     </style>
 </head>
