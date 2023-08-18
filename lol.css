@@ -203,13 +203,13 @@ footer {
     }
     
     .player-tab {
-        padding: 40px; /* Increase padding for larger tab */
+        padding: 20px; /* Increase padding for larger tab */
     }
     
     .front,
     .back {
         width: 70%; /* Adjust width for better balance */
-        padding: 40px;
+        padding: 20px;
     }
 }
 
@@ -220,13 +220,13 @@ footer {
     }
     
     .player-tab {
-        padding: 30px; /* Adjust padding for smaller screens */
+        padding: 20px; /* Adjust padding for smaller screens */
     }
     
     .front,
     .back {
         width: 80%; /* Adjust width for smaller screens */
-        padding: 30px;
+        padding: 10px;
     }
     
     /* Add more specific styles for smaller screens as needed */
