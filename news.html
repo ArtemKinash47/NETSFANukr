@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETSFANUKR - News</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #222;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: orange;
+        }
+
+        .container {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .news-article {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .news-title {
+            margin-top: 0;
+            cursor: pointer;
+        }
+
+        .news-content {
+            display: none;
+        }
+
+        /* Themed background color */
+        .themed-bg {
+            background-color: #1d1d1d; /* Brooklyn Nets blue */
+        }
+
+        /* Responsive adjustments for Samsung Galaxy M31 */
+        @media screen and (max-width: 600px) {
+            nav {
+                flex-wrap: wrap;
+                padding: 5px 0;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .footer {
+                font-size: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body class="themed-bg">
+    <header>
+        <h1>NETSFANUKR</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="news.html">News</a>
+        <a href="players.html">Players</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <h2>Latest News</h2>
+            <article class="news-article">
+                <h3 class="news-title">Exciting Victory in Season Opener</h3>
+                <div class="news-content">
+                    <p>The Brooklyn Nets kicked off their season with a thrilling victory against their rivals, showcasing their dominance on the court.</p>
+                    <p>Posted on: August 19, 2023</p>
+                </div>
+            </article>
+
+            <article class="news-article">
+                <h3 class="news-title">Star Player's Injury Update</h3>
+                <div class="news-content">
+                    <p>Unfortunately, our star player is dealing with a minor injury. However, the team remains optimistic about their swift recovery.</p>
+                    <p>Posted on: August 15, 2023</p>
+                </div>
+            </article>
+
+            <!-- Add more foldable articles as needed -->
+
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Brooklyn Nets Fan Page. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Add script to toggle content visibility when title is clicked
+        const newsTitles = document.querySelectorAll('.news-title');
+
+        newsTitles.forEach(title => {
+            title.addEventListener('click', () => {
+                const content = title.nextElementSibling;
+                content.style.display = content.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
