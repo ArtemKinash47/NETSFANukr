@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETSFANUKR - Players</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #222;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: orange;
+        }
+
+        .container {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+
+        /* Themed background color */
+        .themed-bg {
+            background-color: #1d1d1d; /* Brooklyn Nets blue */
+        }
+
+        /* Responsive adjustments for Samsung Galaxy M31 */
+        @media screen and (max-width: 600px) {
+            nav {
+                flex-wrap: wrap;
+                padding: 5px 0;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .footer {
+                font-size: 10px;
+                text-align: center;
+            }
+
+            .player-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .player-tab {
+                margin: 5px;
+                width: 100%;
+            }
+
+            .player-tab img {
+                max-width: 80px;
+            }
+
+            .player-content {
+                padding: 10px;
+            }
+
+        }
+
+        .player-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .player-tab {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        .player-tab img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        .player-tab:hover {
+            background-color: #ddd;
+        }
+
+        .active-player-tab {
+            background-color: orange;
+            color: #fff;
+            border-color: orange;
+        }
+
+        .player-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="themed-bg">
+    <header>
+        <h1>NETSFANUKR</h1>
+    </header>
+    <nav>
+        <a href="index.html">Головна сторінка</a>
+        <a href="news.html">Новини</a>
+        <a href="players.html">Гравці</a>
+        <a href="schedule.html">Розклад</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="contact.html">Контакт</a>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <h2>Наші Гравці</h2>
+            <!-- Player tabs -->
+            <div class="player-tabs">
+                <div class="player-tab" onclick="showPlayer('player1')">
+                    <img src="royce.png" alt="Ройс О'Ніл">
+                    <span><strong>Ройс О'Ніл</strong></span>
+                    <span><strong>#00</strong></span>
+                </div>
+                <div class="player-tab" onclick="showPlayer('player2')">
+                    <img src="images/player2.jpg" alt="Player 2">
+                    <span>Player 2</span>
+                    <span>#15</span>
+                </div>
+                <div class="player-tab" onclick="showPlayer('player3')">
+                    <img src="images/player3.jpg" alt="Player 3">
+                    <span>Player 3</span>
+                    <span>#7</span>
+                </div>
+                <!-- Add more player tabs as needed -->
+            </div>
+            <!-- Player content -->
+            <div class="player-content" id="player1">
+                <p><strong>Позиція:</strong>  Тяжкий форвард</p>
+                <p><strong>Зріст:</strong> 6'6"(1.98 м)</p>
+                <p><strong>Вага:</strong> 226 lbs(103 кг)</p>
+                <p><strong>Дата народження:</strong> Червень 5, 1993</p>
+                <p><strong>Країна:</strong> США</p>
+                <p><strong>Вік:</strong> 30 років</p>
+                <p><strong>Драфт:</strong> Не задрафтований</p>
+                <p><strong>Останній відвіданий заклад:</strong> Університет Бейлора</p>
+                <p><strong>Досвід у НБА:</strong> 6 років</p>
+
+                <h4>Біографія</h4>
+                <h3>ПРОФЕСІЙНА КАР'ЄРА</h3>
+                <p>Ройс О'Ніл був готовий грати за професійну команду у Литві, але він виділився у літній лізі 2017 року
+                    в Солт-Лейк Сіті та врешті-решт підписав частково гарантований контракт з командою "Джаз". Він
+                    зіграв у 151 регулярному сезонному матчі з "Джаз" з 2017 по 2019 рік. У січні 2020 року О'Ніл
+                    підписав чотирирічний контрактний продовження з "Джаз".</p>
+                <h3>ПЕРЕД НБА</h3>
+                <p>Ройс О'Ніл, форвард з Кіліна, Техас, зрістом 6 футів 4 дюйми, подорожував по всьому світу, перш ніж
+                    потрапити в НБА. О'Ніл грав в коледжі в Університеті Денвера, де його назвали третьою командою
+                    Вест-коуст-конференції після його другого сезону, протягом двох років, перш ніж перейти до Бейлора
+                    на два останні сезони. Після завершення останнього року в університеті його обрали до Другої
+                    академічної команди Великої Дванадцятки (Big 12).
+
+                    Після того, як його не вибрали під час Драфту НБА 2015 року, О'Ніл почав свою професійну кар'єру в
+                    Німеччині за команду MHP Різен Людвігсбург. Він грав за літню лігу Голден Стейт у 2016 році, а потім
+                    підписав контракт із іспанським клубом Herbalife Гран-Канарія на сезон 2016-17.</p>
+
+                <h4>Статистика кар'єри</h4>
+                <table class="player-stats">
+                    <tr>
+                        <td>PPG:</td>
+                        <td>6.6</td>
+                    </tr>
+                    <tr>
+                        <td>APG:</td>
+                        <td>2.4</td>
+                    </tr>
+                    <tr>
+                        <td>RPG:</td>
+                        <td>4.8</td>
+                    </tr>
+                    <tr>
+                        <td>BLK:</td>
+                        <td>0.4</td>
+                    </tr>
+                    <tr>
+                        <td>STL:</td>
+                        <td>0.8</td>
+                    </tr>
+                    <tr>
+                        <td>MIN:</td>
+                        <td>26.7</td>
+                    </tr>
+                </table>
+
+                <h4>Досягнення</h4>
+                <ul>
+                    <li>Переможець Іспанського Суперкубка (2016)</li>
+                    <li>Третя команда за версією WAC (2013)</li>
+                    <!-- Add more achievements here -->
+                </ul>
+
+                <h4>Яскраві моменти гравця</h4>
+                <div class="player-highlights">
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/videoseries?list=PLGkcwZinKB4JDoZ5qcg845NHH7X3Dv4lG"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <!-- Add more video highlights here -->
+                </div>
+
+                <h4>Соціальні мережі</h4>
+                <ul class="social-links">
+                    <li><a href="https://twitter.com/bucketsoneale00" target="_blank">Твітер</a></li>
+                    <li><a href="https://www.instagram.com/rolls_royce00" target="_blank">Інстаграм</a></li>
+                    <!-- Add more social media links here -->
+                </ul>
+            </div>
+            <div class="player-content" id="player2">
+                <h3>Player 2</h3>
+                <p>Player 2 information goes here...</p>
+            </div>
+            <div class="player-content" id="player3">
+                <h3>Player 3</h3>
+                <p>Player 3 information goes here...</p>
+            </div>
+            <!-- Add more player content sections as needed -->
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Brooklyn Nets Fan Page. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript function to show player content based on selected tab
+        function showPlayer(playerId) {
+            const playerContents = document.querySelectorAll('.player-content');
+            const playerTabs = document.querySelectorAll('.player-tab');
+
+            playerContents.forEach(content => {
+                content.style.display = 'none';
+            });
+
+            playerTabs.forEach(tab => {
+                tab.classList.remove('active-player-tab');
+            });
+
+            const selectedContent = document.getElementById(playerId);
+            const selectedTab = document.querySelector(`[onclick="showPlayer('${playerId}')"]`);
+
+            selectedContent.style.display = 'block';
+            selectedTab.classList.add('active-player-tab');
+        }
+    </script>
+</body>
+</html>
