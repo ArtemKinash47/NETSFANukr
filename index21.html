@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETSFANUKR - Players</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #222;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: orange;
+        }
+
+        .container {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+
+        /* Themed background color */
+        .themed-bg {
+            background-color: #1d1d1d;
+            /* Brooklyn Nets blue */
+        }
+
+        /* Responsive adjustments for Samsung Galaxy M31 */
+        @media screen and (max-width: 600px) {
+            nav {
+                flex-wrap: wrap;
+                padding: 5px 0;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .footer {
+                font-size: 10px;
+                text-align: center;
+            }
+
+            .player-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .player-tab {
+                margin: 5px;
+                width: 100%;
+            }
+
+            .player-tab img {
+                max-width: 80px;
+            }
+
+            .player-content {
+                padding: 10px;
+            }
+
+            .player-stats {
+                margin-top: 10px;
+            }
+
+            .player-highlights iframe {
+                width: 100%;
+            }
+
+            .social-links {
+                padding-left: 0;
+            }
+
+            .social-links li {
+                margin: 5px 0;
+            }
+
+        }
+
+        .player-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .player-tab {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        .player-tab img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        .player-tab:hover {
+            background-color: #ddd;
+        }
+
+        .active-player-tab {
+            background-color: orange;
+            color: #fff;
+            border-color: orange;
+        }
+
+        .player-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .player-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .player-button:hover {
+            background-color: #1d1d1d;
+        }
+    </style>
+</head>
+
+<body class="themed-bg">
+    <header>
+        <h1>NETSFANUKR</h1>
+    </header>
+    <nav>
+        <a href="index.html">Головна сторінка</a>
+        <a href="news.html">Новини</a>
+        <a href="players.html">Гравці</a>
+        <a href="schedule.html">Розклад</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="contact.html">Контакт</a>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <!-- Player Tabs -->
+            <div class="player-tabs">
+                <div class="player-tab" onclick="showPlayer('royce')">
+                    <img src="royce.png" alt="Ройс О'Ніл">
+                    <span><strong>Ройс О'Ніл</strong></span>
+                    <span><strong>#00</strong></span>
+                </div>
+                <div class="player-tab" onclick="showPlayer('dariq')">
+                    <img src="dariq.png" alt="Player 2">
+                    <span><strong>Дарік Вайтхед</strong></span>
+                    <span><strong>#0</strong></span>
+                </div>
+                <div class="player-tab" onclick="showPlayer('mikal')">
+                    <img src="mikal.png" alt="Player 3">
+                    <span><strong>Майкал Бріджес</strong></span>
+                    <span><strong>#1</strong></span>
+                </div>
+            </div>
+
+            <!-- Player Content -->
+            <div id="royce" class="player-content">
+                <p><strong>Позиція:</strong> Тяжкий форвард</p>
+                <p><strong>Зріст:</strong> 6'6"(1.98 м)</p>
+                <p><strong>Вага:</strong> 226 lbs(103 кг)</p>
+                <p><strong>Дата народження:</strong> Червень 5, 1993</p>
+                <p><strong>Країна:</strong> США</p>
+                <p><strong>Вік:</strong> 30 років</p>
+                <p><strong>Драфт:</strong> Не задрафтований</p>
+                <p><strong>Останній відвіданий заклад:</strong> Університет Бейлора</p>
+                <p><strong>Досвід у НБА:</strong> 6 років</p>
+                <button class="player-button" onclick="window.location.href='royce.html'">На сторінку гравця</button>
+            </div>
+            <div id="dariq" class="player-content">
+                <p><strong>Позиція:</strong> Форвард</p>
+                <p><strong>Зріст:</strong> 6'7" (2.01 м)</p>
+                <p><strong>Вага:</strong> 220lb (100 кг)</p>
+                <p><strong>Дата народження:</strong> Серпень 1, 2004</p>
+                <p><strong>Країна:</strong> США</p>
+                <p><strong>Вік:</strong> 19 років</p>
+                <p><strong>Драфт:</strong> 2023 Раунд 1 Пік 22</p>
+                <p><strong>Останній відвіданий заклад:</strong> Університет Дюка</p>
+                <p><strong>Досвід:</strong> Новачок</p>
+                <button class="player-button" onclick="window.location.href='dariq.html'">На сторінку гравця</button>
+            </div>
+            <div id="mikal" class="player-content">
+                <!-- Player 3 Content Here -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 NETSFANUKR. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript function to show player content based on selected tab
+        function showPlayer(playerId) {
+            const selectedContent = document.getElementById(playerId);
+
+            if (selectedContent.style.display === 'block') {
+                selectedContent.style.display = 'none';
+            } else {
+                const playerContents = document.querySelectorAll('.player-content');
+
+                playerContents.forEach(content => {
+                    content.style.display = 'none';
+                });
+
+                selectedContent.style.display = 'block';
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
