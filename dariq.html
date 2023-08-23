@@ -138,6 +138,10 @@
                 /* Adjust the font size as needed */
             }
 
+            .popup-menu {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
         }
 
         .player-tabs {
@@ -199,6 +203,43 @@
         .player-button:hover {
             background-color: #1d1d1d;
         }
+
+        .popup-menu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    z-index: 1;
+}
+
+.popup-menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.popup-menu a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+button#playersButton {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button#playersButton:hover {
+    text-decoration: underline;
+}
+
     </style>
 </head>
 
@@ -209,7 +250,26 @@
     <nav>
         <a href="index.html">Головна сторінка</a>
         <a href="news.html">Новини</a>
-        <a href="index21.html">Гравці</a>
+        <button id="playersButton">Гравці</button>
+        <div id="playersMenu" class="popup-menu">
+            <a href="royce.html">Royce O`neal</a>
+            <a href="dariq.html">Dariq Whitehead</a>
+            <a href="mikal.html">Mikal Bridges</a>
+            <a href="cam.html">Cameron Johnson</a>
+            <a href="dennis.html">Dennis Smith Jr</a>
+            <a href="darius.html">Darius Bazley</a>
+            <a href="lonnie.html">Lonnie Walker IV</a>
+            <a href="trendon.html">Trendon Watford</a>
+            <a href="ben.html">Ben Simmons</a>
+            <a href="armoni.html">Armoni Brooks</a>
+            <a href="day.html">Day`Ron Sharpe</a>
+            <a href="noah.html">Noah Clowney</a>
+            <a href="jalen.html">Jalen Wilson</a>
+            <a href="camt.html">Cam Thomas</a>
+            <a href="spencer.html">Spencer Dinwiddie</a>
+            <a href="dorian.html">Dorian Finney-Smith</a>
+            <a href="nic.html">Nicolas Claxton</a>
+        </div>
         <a href="schedule.html">Розклад</a>
         <a href="gallery.html">Галерея</a>
         <a href="contact.html">Контакт</a>
@@ -297,6 +357,28 @@
     <footer>
         <p>&copy; 2023 NETSFANUKR. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.getElementById("playersButton").addEventListener("click", function() {
+            var playersMenu = document.getElementById("playersMenu");
+            
+            if (playersMenu.style.display === "block") {
+                playersMenu.style.display = "none";
+            } else {
+                playersMenu.style.display = "block";
+            }
+        });
+        
+        // Close the menu if user clicks outside of it
+        window.addEventListener("click", function(event) {
+            var playersMenu = document.getElementById("playersMenu");
+            var playersButton = document.getElementById("playersButton");
+            
+            if (event.target !== playersMenu && event.target !== playersButton) {
+                playersMenu.style.display = "none";
+            }
+        });
+        </script>
 </body>
 
 </html>
