@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETSFANUKR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #222;
+            padding: 10px 0;
+        }
+
+        navp {
+            display: flex;
+            justify-content: center;
+            background-color: #1d1d1d;
+            padding: 10px 0;
+            color: #fff;
+            font-size: 40px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: orange;
+        }
+
+        .container {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+
+        /* Themed background color */
+        .themed-bg {
+            background-color: #1d1d1d;
+            /* Brooklyn Nets blue */
+        }
+
+        /* Responsive adjustments for Samsung Galaxy M31 */
+        @media screen and (max-width: 600px) {
+            nav {
+                flex-wrap: wrap;
+                padding: 5px 0;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .footer {
+                font-size: 10px;
+                text-align: center;
+            }
+
+            .player-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .player-tab {
+                margin: 5px;
+                width: 100%;
+            }
+
+            .player-tab img {
+                max-width: 80px;
+            }
+
+            .player-content {
+                padding: 10px;
+            }
+
+            .player-stats {
+                margin-top: 10px;
+            }
+
+            .player-highlights iframe {
+                width: 100%;
+            }
+
+            .social-links {
+                padding-left: 0;
+            }
+
+            .social-links li {
+                margin: 5px 0;
+            }
+
+            navp {
+                flex-wrap: wrap;
+                padding: 5px 0;
+                font-size: 18px;
+                /* Adjust the font size as needed */
+            }
+
+        }
+
+        .player-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .player-tab {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        .player-tab img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        .player-tab:hover {
+            background-color: #ddd;
+        }
+
+        .active-player-tab {
+            background-color: orange;
+            color: #fff;
+            border-color: orange;
+        }
+
+        .player-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .player-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .player-button:hover {
+            background-color: #1d1d1d;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>NETSFANUKR</h1>
+    </header>
+    <nav>
+        <a href="index.html">Головна сторінка</a>
+        <a href="news.html">Новини</a>
+        <a href="index21.html">Гравці</a>
+        <a href="schedule.html">Розклад</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="contact.html">Контакт</a>
+    </nav>
+    <navp>
+        <p><strong>DENNIS SMITH JR</strong></p>
+    </navp>
+    <div class="container">
+        <div class="content">
+            <div class="player-info">
+                <img src="dennisprofile.png" alt="Dennis Smith Jr"
+                    style="max-width: 100%; height: auto; margin-top: 10px;">
+
+                <h4>Біографія</h4>
+
+                <h3>ПРОФЕСІЙНА КАР'ЄРА</h3>
+
+                <p>Dennis Smith Jr. грав у коледжному баскетболі за Університет Північної Кароліни (2016–2017), де він
+                    отримав звання Новачка року Атлантичної Коледжійської Конференції (ACC), перш ніж бути вибраним
+                    дев'ятим загальним вибором командою Даллас Маверікс на Драфті НБА 2017 року. У свій новачковий сезон
+                    Сміт посів третє місце серед новачків за результативними передачами, п'яте місце за набраними
+                    очками, шосте місце за перехопленнями та сьоме місце за часом на майданчику. Він представляв збірну
+                    США на Молодіжному матчі "Mtn Dew Kickstart Rising Stars" 2018 року та був визнаний членом другого
+                    складу НБА за сезон 2017-2018 років серед новачків.
+
+
+
+
+
+                </p>
+
+                <h4>Статистика кар'єри</h4>
+                <table class="player-stats">
+                    <tr>
+                        <td>PPG:</td>
+                        <td>10.3</td>
+                    </tr>
+                    <tr>
+                        <td>APG:</td>
+                        <td>4.4</td>
+                    </tr>
+                    <tr>
+                        <td>RPG:</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>BLK:</td>
+                        <td>0.4</td>
+                    </tr>
+                    <tr>
+                        <td>STL:</td>
+                        <td>1.1</td>
+                    </tr>
+                    <tr>
+                        <td>MIN:</td>
+                        <td>24.2</td>
+                    </tr>
+                </table>
+
+                <h4>Досягнення</h4>
+                <ul>
+                    <li>Другий склад НБА серед новачків (2018)</li>
+                    <li>Новачок року Атлантичної Коледжійської Конференції (2017)</li>
+                    <li>Другий склад Команди Всіх Зірок Атлантичної Коледжійської Конференції (2017)</li>
+                    <li>Команда найкращих першокурсників Атлантичної Коледжійської Конференції (2017)</li>
+
+                </ul>
+
+                <h4>Яскраві моменти гравця</h4>
+                <div class="player-highlights">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/mLN4W8JmHgc?start=4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+
+                <h4>Соціальні мережі</h4>
+                <ul class="social-links">
+                    <li><a href="https://twitter.com/Dennis1SmithJr" target="_blank">Твітер</a></li>
+                    <li><a href="https://www.instagram.com/desmith4/?hl=uk" target="_blank">Інстаграм</a></li>
+                    <!-- Add more social media links here -->
+                </ul>
+            </div>
+
+            <!-- Additional content about John Doe can go here -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 NETSFANUKR. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

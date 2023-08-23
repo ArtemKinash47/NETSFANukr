@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETSFANUKR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #222;
+            padding: 10px 0;
+        }
+
+        navp {
+            display: flex;
+            justify-content: center;
+            background-color: #1d1d1d;
+            padding: 10px 0;
+            color: #fff;
+            font-size: 40px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: orange;
+        }
+
+        .container {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+
+        /* Themed background color */
+        .themed-bg {
+            background-color: #1d1d1d;
+            /* Brooklyn Nets blue */
+        }
+
+        /* Responsive adjustments for Samsung Galaxy M31 */
+        @media screen and (max-width: 600px) {
+            nav {
+                flex-wrap: wrap;
+                padding: 5px 0;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .footer {
+                font-size: 10px;
+                text-align: center;
+            }
+
+            .player-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .player-tab {
+                margin: 5px;
+                width: 100%;
+            }
+
+            .player-tab img {
+                max-width: 80px;
+            }
+
+            .player-content {
+                padding: 10px;
+            }
+
+            .player-stats {
+                margin-top: 10px;
+            }
+
+            .player-highlights iframe {
+                width: 100%;
+            }
+
+            .social-links {
+                padding-left: 0;
+            }
+
+            .social-links li {
+                margin: 5px 0;
+            }
+
+            navp {
+                flex-wrap: wrap;
+                padding: 5px 0;
+                font-size: 18px;
+                /* Adjust the font size as needed */
+            }
+
+        }
+
+        .player-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .player-tab {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        .player-tab img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        .player-tab:hover {
+            background-color: #ddd;
+        }
+
+        .active-player-tab {
+            background-color: orange;
+            color: #fff;
+            border-color: orange;
+        }
+
+        .player-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .player-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .player-button:hover {
+            background-color: #1d1d1d;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>NETSFANUKR</h1>
+    </header>
+    <nav>
+        <a href="index.html">Головна сторінка</a>
+        <a href="news.html">Новини</a>
+        <a href="index21.html">Гравці</a>
+        <a href="schedule.html">Розклад</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="contact.html">Контакт</a>
+    </nav>
+    <navp>
+        <p><strong>BEN SIMMONS</strong></p>
+    </navp>
+    <div class="container">
+        <div class="content">
+            <div class="player-info">
+                <img src="benprofile.png" alt="Ben Simmons" style="max-width: 100%; height: auto; margin-top: 10px;">
+
+
+                <h4>Біографія</h4>
+
+                <h3>ПРОФЕСІЙНА КАР'ЄРА</h3>
+
+                <p>Має кар'єрні середні показники у 16,4 очка (.554% з полі, .583% з штрафних), 8,5 підбору, 7,5
+                    передачі та 34,0 хвилин у 160 матчах (160 у старті) протягом 2 сезонів у НБА з "Філадельфією".</p>
+
+                <h3>ПЕРЕД НБА</h3>
+
+                <p>"LSU" (2015-16) 2015-16 Національний фрешмен року Wayman Tisdale (USBWA)... 2015-16 Національний
+                    фрешмен року за версією Sporting News... 2015-16 Національний фрешмен року за версією USA Today...
+                    2015-16 Новачок року конференції SEC... 2015-16 Перша команда SEC... 2015-16 Новачок року і команда
+                    SEC All-Freshman... Перша команда USBWA All-American... Друга команда All-American за версіями ESPN,
+                    Sports Illustrated та Sporting News... Третя команда All-American за версією USA Today... Сіммонс
+                    був консенсусом...</p>
+
+
+                <h3>ПРО ОСОБИСТЕ ЖИТТЯ</h3>
+
+                <p>Народився 20 липня 1996 року в Мельбурні, Австралія ... Лівша ... Прізвище "Бенні" ... Батьки - Девід
+                    і Джулі Сіммонс ... Батько грав 13 сезонів у Національній баскетбольній лізі Австралії (NBL) і
+                    виборов нагороди All-League з "Мельбурном" у 1990 році та чемпіонство NBL з "Тайгерс" у 1993 році
+                    ... Він також виступав за команди "Ньюкасл", "Сідней" та "Канберра" у NBL ... Після завершення
+                    гравецької кар'єри виконував обов'язки головного тренера та асистента в "Хантер Пайратс" (2003-05)
+                    ... У Бена є ще два брати - Ліам і Шон, і три сестри - Олівія, Мелісса, Емілі ... Ліам є асистентом
+                    тренера в Southwest Baptist у місті Болівар, штат Міссурі ... Улюблені страви - стейк і салат ...
+                </p>
+
+                <h4>Статистика кар'єри</h4>
+                <table class="player-stats">
+                    <tr>
+                        <td>PPG:</td>
+                        <td>14.7</td>
+                    </tr>
+                    <tr>
+                        <td>APG:</td>
+                        <td>7.5</td>
+                    </tr>
+                    <tr>
+                        <td>RPG:</td>
+                        <td>7.8 </td>
+                    </tr>
+                    <tr>
+                        <td>BLK:</td>
+                        <td>0.7 </td>
+                    </tr>
+                    <tr>
+                        <td>STL:</td>
+                        <td>1.6 </td>
+                    </tr>
+                    <tr>
+                        <td>MIN:</td>
+                        <td>32.9</td>
+                    </tr>
+                </table>
+
+                <h4>Досягнення</h4>
+                <ul>
+                    <li>3 рази учасник Матчу всіх зірок НБА (2019–2021)</li>
+                    <li>Третя команда All-NBA (2020)</li>
+                    <li>2 рази учасник Першої оборонної команди НБА (2020, 2021)</li>
+                    <li>Новачок року НБА (2018)</li>
+                    <li>Перша оборонна команда для новачків НБА (2018)</li>
+                    <li>Лідер НБА за кількістю відібраних м'ячів (2020)</li>
+                    <li>Консенсусний першотримач збірної All-American (2016)</li>
+                    <li>Національний фрешмен року за версією USBWA (2016)</li>
+                    <li>Перша збірна конференції SEC (2016)</li>
+                    <li>Новачок року конференції SEC (2016)</li>
+                    <li>Містер Баскетбол США (2015)</li>
+                    <li>Національний гравець року за версією Gatorade (2015)</li>
+                    <li>Національний гравець року за версією Naismith Prep (2015)</li>
+                    <li>Національний гравець року за версією Morgan Wootten (2015)</li>
+                    <li>Макдональдс Алл-Американець (2015)</li>
+                    <li>Перша збірна Parade All-American (2015)</li>
+                </ul>
+
+                <h4>Яскраві моменти гравця</h4>
+                <div class="player-highlights">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/LYxZSFYKhrk"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+
+                <h4>Соціальні мережі</h4>
+                <ul class="social-links">
+                    <li><a href="https://twitter.com/BenSimmons25" target="_blank">Твітер</a></li>
+                    <li><a href="https://www.instagram.com/bensimmons/" target="_blank">Інстаграм</a></li>
+                    <!-- Add more social media links here -->
+                </ul>
+            </div>
+
+            <!-- Additional content about John Doe can go here -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 NETSFANUKR. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETSFANUKR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #222;
+            padding: 10px 0;
+        }
+
+        navp {
+            display: flex;
+            justify-content: center;
+            background-color: #1d1d1d;
+            padding: 10px 0;
+            color: #fff;
+            font-size: 40px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: orange;
+        }
+
+        .container {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+
+        /* Themed background color */
+        .themed-bg {
+            background-color: #1d1d1d;
+            /* Brooklyn Nets blue */
+        }
+
+        /* Responsive adjustments for Samsung Galaxy M31 */
+        @media screen and (max-width: 600px) {
+            nav {
+                flex-wrap: wrap;
+                padding: 5px 0;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .footer {
+                font-size: 10px;
+                text-align: center;
+            }
+
+            .player-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .player-tab {
+                margin: 5px;
+                width: 100%;
+            }
+
+            .player-tab img {
+                max-width: 80px;
+            }
+
+            .player-content {
+                padding: 10px;
+            }
+
+            .player-stats {
+                margin-top: 10px;
+            }
+
+            .player-highlights iframe {
+                width: 100%;
+            }
+
+            .social-links {
+                padding-left: 0;
+            }
+
+            .social-links li {
+                margin: 5px 0;
+            }
+
+            navp {
+                flex-wrap: wrap;
+                padding: 5px 0;
+                font-size: 18px;
+                /* Adjust the font size as needed */
+            }
+
+        }
+
+        .player-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .player-tab {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        .player-tab img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        .player-tab:hover {
+            background-color: #ddd;
+        }
+
+        .active-player-tab {
+            background-color: orange;
+            color: #fff;
+            border-color: orange;
+        }
+
+        .player-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .player-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .player-button:hover {
+            background-color: #1d1d1d;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>NETSFANUKR</h1>
+    </header>
+    <nav>
+        <a href="index.html">Головна сторінка</a>
+        <a href="news.html">Новини</a>
+        <a href="index21.html">Гравці</a>
+        <a href="schedule.html">Розклад</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="contact.html">Контакт</a>
+    </nav>
+    <navp>
+        <p><strong>ARMONI BROOKS</strong></p>
+    </navp>
+    <div class="container">
+        <div class="content">
+            <div class="player-info">
+                <img src="armoniprofile.png" alt="Armoni Brooks"
+                    style="max-width: 100%; height: auto; margin-top: 10px;">
+
+
+                <h4>Біографія</h4>
+
+                <h3>ПРОФЕСІЙНА КАР'ЄРА</h3>
+
+                <p>Коледж Парк Скайхокс (2019–2020): Після того, як його не вибрали на Драфті НБА 2019 року, Брукс
+                    виступив за "Вашингтон Візардс" на Літній лізі НБА 2019 року. В серпні 2019 року він підписав
+                    контракт з "Атланта Хокс", але був звільнений 18 жовтня. Він потім потрапив до складу фармклубу
+                    "Хокс", "Коледж Парк Скайхокс". 24 січня 2020 року Брукс забив кар'єрний максимум у 38 очок проти
+                    "Лейкленд Меджік", а через чотири дні він забив 32 очки проти "Ріо Гранде Веллі Вайперс". Протягом
+                    сезону він середньо набирав 10,7 очка і 3,4 підбору за матч для "Скайхокс".
+
+                    20 квітня 2020 року Брукс підписав контракт з "Саскачеван Раттлерс" з Канадської елітної
+                    баскетбольної ліги. Однак він не виступив за "Раттлерс", так як пропустив сезон через пандемію
+                    COVID-19.</p>
+
+                <p>"Ріо Гранде Веллі Вайперс" (2021): 11 січня 2021 року Брукс був вибраний "Ріо Гранде Веллі Вайперс" у
+                    першому раунді драфту НБА G League. Протягом 15 матчів під час сезону G League в бульбашці, він
+                    середньо набирав 16,8 очка, 3,7 підбору, 3,0 передачі та 1,07 відібраної м'яча на гру, при чому був
+                    лідером ліги за кількістю трьохочкових (57), в середньому здійснюючи 3,8 при точності 37,5%.</p>
+
+                <p>"Х'юстон Рокетс" (2021–2022): 3 квітня 2021 року Брукс підписав двосторонній контракт з "Ріо Гранде
+                    Веллі Вайперс", фармклубом "Х'юстон Рокетс". Він забив кар'єрний максимум у 24 очки 12 травня проти
+                    "Лос-Анджелес Лейкерс".
+
+                    27 серпня 2021 року Брукс підписав новий чотирьохрічний контракт з "Рокетс". 10 лютого 2022 року
+                    його звільнили.</p>
+
+                <p>Повернення до "Коледж Парк" (2022): 27 лютого 2022 року Брукс повернувся до "Коледж Парк Скайхокс".
+                </p>
+
+                <p>"Торонто Репторс" (2022): 6 березня 2022 року Брукс підписав контракт на 10 днів з "Торонто Репторс".
+                    16 березня він підписав другий контракт на 10 днів, а 26 березня - дворічний контракт. 30 липня його
+                    звільнили.</p>
+
+                <p>Третій виступ за "Коледж Парк" (2022–2023): 4 листопада 2022 року Брукс був включений до складу
+                    відкритого списку "Коледж Парк Скайхокс".</p>
+
+                <p>"Бруклін / Лонг-Айленд Нетс" (2023 – дотепер): 18 липня 2023 року Брукс підписав двосторонній
+                    контракт з "Бруклін Нетс".</p>
+
+                <h3>ПЕРЕД НБА</h3>
+
+                <p>Брукс навчався в Макніл Хай Скул в Остіні, Техас, де він грав у баскетбол. По відзначений помірно в
+                    період навчання у вищій школі, він вступив до Університету Г'юстону, щоб грати за чоловічу
+                    баскетбольну команду "Х'юстон Кугарс" під керівництвом головного тренера Кельвіна Семпсона. В
+                    третьому курсі Брукс набирав 13,4 очка та 6,3 підбору в середньому за гру 30,7 хвилин на матч. Його
+                    було включено до Другої збірної AAC (Американської атлетичної конференції) та Команди турніру AAC.
+                    Брукс заявив про свій намір взяти участь у Драфті НБА 2019 року та втратив останній рік права на
+                    участь у коледжному баскетболі. Перед драфтом вміння стріляти було вважано його найкращими
+                    характеристиками.</p>
+
+                <h4>Статистика кар'єри</h4>
+                <table class="player-stats">
+                    <tr>
+                        <td>PPG:</td>
+                        <td>6.9</td>
+                    </tr>
+                    <tr>
+                        <td>APG:</td>
+                        <td>1.2</td>
+                    </tr>
+                    <tr>
+                        <td>RPG:</td>
+                        <td>2.3 </td>
+                    </tr>
+                    <tr>
+                        <td>BLK:</td>
+                        <td>0.2 </td>
+                    </tr>
+                    <tr>
+                        <td>STL:</td>
+                        <td>0.5 </td>
+                    </tr>
+                    <tr>
+                        <td>MIN:</td>
+                        <td>18.4</td>
+                    </tr>
+                </table>
+
+                <h4>Досягнення</h4>
+                <ul>
+                    <li>Друга збірна AAC (2019)</li>
+                    <li>Шостий гравець року AAC (2018)</li>
+
+                </ul>
+
+                <h4>Яскраві моменти гравця</h4>
+                <div class="player-highlights">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tKlrZXYzt68"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+
+                <h4>Соціальні мережі</h4>
+                <ul class="social-links">
+                    <li><a href="https://twitter.com/snipabrooks_" target="_blank">Твітер</a></li>
+                    <li><a href="https://www.instagram.com/snipabrooks/" target="_blank">Інстаграм</a></li>
+                    <!-- Add more social media links here -->
+                </ul>
+            </div>
+
+            <!-- Additional content about John Doe can go here -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 NETSFANUKR. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
