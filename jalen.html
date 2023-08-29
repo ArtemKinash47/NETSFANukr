@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETSFANUKR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #222;
+            padding: 10px 0;
+        }
+
+        navp {
+            display: flex;
+            justify-content: center;
+            background-color: #1d1d1d;
+            padding: 10px 0;
+            color: #fff;
+            font-size: 40px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: orange;
+        }
+
+        .container {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+
+        /* Themed background color */
+        .themed-bg {
+            background-color: #1d1d1d;
+            /* Brooklyn Nets blue */
+        }
+
+        /* Responsive adjustments for Samsung Galaxy M31 */
+        @media screen and (max-width: 600px) {
+            nav {
+                flex-wrap: wrap;
+                padding: 5px 0;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .footer {
+                font-size: 10px;
+                text-align: center;
+            }
+
+            .player-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .player-tab {
+                margin: 5px;
+                width: 100%;
+            }
+
+            .player-tab img {
+                max-width: 80px;
+            }
+
+            .player-content {
+                padding: 10px;
+            }
+
+            .player-stats {
+                margin-top: 10px;
+            }
+
+            .player-highlights iframe {
+                width: 100%;
+            }
+
+            .social-links {
+                padding-left: 0;
+            }
+
+            .social-links li {
+                margin: 5px 0;
+            }
+
+            navp {
+                flex-wrap: wrap;
+                padding: 5px 0;
+                font-size: 18px;
+                /* Adjust the font size as needed */
+            }
+
+            .popup-menu {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+        }
+
+        .player-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .player-tab {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        .player-tab img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        .player-tab:hover {
+            background-color: #ddd;
+        }
+
+        .active-player-tab {
+            background-color: orange;
+            color: #fff;
+            border-color: orange;
+        }
+
+        .player-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .player-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .player-button:hover {
+            background-color: #1d1d1d;
+        }
+
+        .popup-menu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    z-index: 1;
+}
+
+.popup-menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.popup-menu a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+button#playersButton {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button#playersButton:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>NETSFANUKR</h1>
+    </header>
+    <nav>
+        <a href="index.html">Головна сторінка</a>
+        <a href="news.html">Новини</a>
+        <button id="playersButton">Гравці</button>
+        <div id="playersMenu" class="popup-menu">
+            <a href="royce.html">Royce O`neal #00</a>
+            <a href="dariq.html">Dariq Whitehead #0</a>
+            <a href="mikal.html">Mikal Bridges #1</a>
+            <a href="cam.html">Cameron Johnson #2</a>
+            <a href="dennis.html">Dennis Smith Jr #4</a>
+            <a href="darius.html">Darius Bazley #7</a>
+            <a href="lonnie.html">Lonnie Walker IV #8</a>
+            <a href="trendon.html">Trendon Watford #9</a>
+            <a href="ben.html">Ben Simmons #10</a>
+            <a href="armoni.html">Armoni Brooks #13</a>
+            <a href="day.html">Day`Ron Sharpe #20</a>
+            <a href="noah.html">Noah Clowney #21</a>
+            <a href="jalen.html">Jalen Wilson #22</a>
+            <a href="camt.html">Cam Thomas #24</a>
+            <a href="spencer.html">Spencer Dinwiddie #26</a>
+            <a href="dorian.html">Dorian Finney-Smith #28</a>
+            <a href="nic.html">Nicolas Claxton #33</a>
+        </div>
+        <a href="schedule.html">Розклад</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="contact.html">Контакт</a>
+    </nav>
+    <navp>
+        <p><strong>JALEN WILSON</strong></p>
+    </navp>
+    <div class="container">
+        <div class="content">
+            <div class="player-info">
+                <img src="jalenprofile.png" alt="Jalen Wilson"
+                style="max-width: 100%; height: auto; margin-top: 10px;">
+
+                <p><strong>Позиція:</strong> Форвард</p>
+                <p><strong>Зріст:</strong> 6'8" (2.03 м)</p>
+                <p><strong>Вага:</strong> 220lb (100 кг)</p>
+                <p><strong>Дата народження:</strong> Листопад 4, 2000</p>
+                <p><strong>Країна:</strong> США</p>
+                <p><strong>Вік:</strong> 22 роки</p>
+                <p><strong>Драфт:</strong> 2023 Раунд 2 Пік 51</p>
+                <p><strong>Останній відвіданий заклад:</strong> Університет Канзасу</p>
+                <p><strong>Досвід:</strong> Новачок</p>
+
+                <h4>Біографія</h4>
+
+                <h3>ПРОФЕСІЙНА КАР'ЄРА</h3>
+
+                <p>Вільсон був обраний Бруклін Нетс з 51-им загальним вибором у другому раунді Драфту НБА 2023 року. 5
+                    липня 2023 року Вільсон підписав двосторонній контракт з Нетс.</p>
+
+                <h3>ПЕРЕД НБА</h3>
+
+                <p>8 листопада 2019 року Вільсон отримав перелом щиколотки у матчі проти UNC Greensboro у своєму другому
+                    кар'єрному поєдинку. Він пропустив решту сезону і отримав медичний редшірт після операції. 8 грудня
+                    2020 року Вільсон набрав 23 очки та здійснив 10 підборів, зробивши вирішальний триочковий кидок за
+                    42 секунди до завершення гри, у перемозі з рахунком 73–72 над восьмим Creighton. У своєму першому
+                    сезоні Вільсон середньо набирав 11,8 очка та 7,9 підбору за матч, отримавши нагороду "Новачок року"
+                    в Біг 12. 9 квітня 2021 року він оголосив про свій намір взяти участь у Драфті НБА 2021 року,
+                    продовжуючи залишити собі можливість грати в коледжі. Вільсон нарешті повернувся до Канзасу. 2
+                    листопада його було дискваліфіковано на три матчі через арешт за підозрою у водінні в стані
+                    алкогольного сп'яніння. Вільсон був визнаний третьою збірною "Біг 12" як софтмор. Він середньо
+                    набирав 11,1 очка та 7,4 підбору за матч, допомагаючи Джейхокс виграти національний титул. Після
+                    сезону Вільсон оголосив про свій намір взяти участь у Драфті НБА 2022 року, але нарешті відмовився
+                    від участі в ньому. Як старший, Вільсон був названий Гравцем Року "Біг 12".</p>
+
+                <h4>Статистика кар'єри</h4>
+                <table class="player-stats">
+                    <tr>
+                        <td>PPG:</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>APG:</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>RPG:</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>BLK:</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>STL:</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>MIN:</td>
+                        <td>--</td>
+                    </tr>
+                </table>
+
+                <h4>Досягнення</h4>
+                <ul>
+                    <li>Чемпіон НКАА (2022)</li>
+                    <li>Консенсусний перша команда Всеамериканців (2023)</li>
+                    <li>Нагорода Джуліуса Ервінга (2023)</li>
+                    <li>Гравець року "Біг 12" (2023)</li>
+                    <li>Перша збірна "Біг 12" (2023)</li>
+                    <li>Третя збірна "Біг 12" (2022)</li>
+                    <li>Всіх новачків "Біг 12" (2021)</li>
+                    <li>Перша збірна "Біг 12" для фрешменів (2021)</li>
+                </ul>
+
+                <h4>Яскраві моменти гравця</h4>
+                <div class="player-highlights">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/GKr2y-yp3tY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+
+                <h4>Соціальні мережі</h4>
+                <ul class="social-links">
+                    <li><a href="https://twitter.com/thejalenwilson" target="_blank">Твітер</a></li>
+                    <li><a href="https://www.instagram.com/thejalenwilson/" target="_blank">Інстаграм</a></li>
+                    <!-- Add more social media links here -->
+                </ul>
+            </div>
+
+            <!-- Additional content about John Doe can go here -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 NETSFANUKR. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("playersButton").addEventListener("click", function() {
+            var playersMenu = document.getElementById("playersMenu");
+            
+            if (playersMenu.style.display === "block") {
+                playersMenu.style.display = "none";
+            } else {
+                playersMenu.style.display = "block";
+            }
+        });
+        
+        // Close the menu if user clicks outside of it
+        window.addEventListener("click", function(event) {
+            var playersMenu = document.getElementById("playersMenu");
+            var playersButton = document.getElementById("playersButton");
+            
+            if (event.target !== playersMenu && event.target !== playersButton) {
+                playersMenu.style.display = "none";
+            }
+        });
+        </script>
+</body>
+
+</html>

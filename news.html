@@ -115,6 +115,44 @@
                 height: auto;
             }
         }
+
+            .popup-menu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    z-index: 1;
+}
+
+.popup-menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.popup-menu a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+button#playersButton {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button#playersButton:hover {
+    text-decoration: underline;
+}
+
+
     </style>
 </head>
 
@@ -125,7 +163,26 @@
     <nav>
         <a href="index.html">Головна сторінка</a>
         <a href="news.html">Новини</a>
-        <a href="players.html">Гравці</a>
+        <button id="playersButton">Гравці</button>
+        <div id="playersMenu" class="popup-menu">
+            <a href="royce.html">Royce O`neal #00</a>
+            <a href="dariq.html">Dariq Whitehead #0</a>
+            <a href="mikal.html">Mikal Bridges #1</a>
+            <a href="cam.html">Cameron Johnson #2</a>
+            <a href="dennis.html">Dennis Smith Jr #4</a>
+            <a href="darius.html">Darius Bazley #7</a>
+            <a href="lonnie.html">Lonnie Walker IV #8</a>
+            <a href="trendon.html">Trendon Watford #9</a>
+            <a href="ben.html">Ben Simmons #10</a>
+            <a href="armoni.html">Armoni Brooks #13</a>
+            <a href="day.html">Day`Ron Sharpe #20</a>
+            <a href="noah.html">Noah Clowney #21</a>
+            <a href="jalen.html">Jalen Wilson #22</a>
+            <a href="camt.html">Cam Thomas #24</a>
+            <a href="spencer.html">Spencer Dinwiddie #26</a>
+            <a href="dorian.html">Dorian Finney-Smith #28</a>
+            <a href="nic.html">Nicolas Claxton #33</a>
+        </div>
         <a href="schedule.html">Розклад</a>
         <a href="gallery.html">Галерея</a>
         <a href="contact.html">Контакт</a>
@@ -664,7 +721,7 @@
         </div>
     </div>
     <footer>
-        <p>&copy; 2023 Brooklyn Nets Fan Page. All rights reserved.</p>
+        <p>&copy; 2023 NETSFANUKR. All rights reserved.</p>
     </footer>
 
     <script>
@@ -677,6 +734,27 @@
                 content.style.display = content.style.display === 'none' ? 'block' : 'none';
             });
         });
+
+        
+    document.getElementById("playersButton").addEventListener("click", function() {
+        var playersMenu = document.getElementById("playersMenu");
+        
+        if (playersMenu.style.display === "block") {
+            playersMenu.style.display = "none";
+        } else {
+            playersMenu.style.display = "block";
+        }
+    });
+    
+    // Close the menu if user clicks outside of it
+    window.addEventListener("click", function(event) {
+        var playersMenu = document.getElementById("playersMenu");
+        var playersButton = document.getElementById("playersButton");
+        
+        if (event.target !== playersMenu && event.target !== playersButton) {
+            playersMenu.style.display = "none";
+        }
+    });
     </script>
 </body>
 
