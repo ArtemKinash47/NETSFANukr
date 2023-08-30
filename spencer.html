@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETSFANUKR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #222;
+            padding: 10px 0;
+        }
+
+        navp {
+            display: flex;
+            justify-content: center;
+            background-color: #1d1d1d;
+            padding: 10px 0;
+            color: #fff;
+            font-size: 40px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: orange;
+        }
+
+        .container {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+
+        /* Themed background color */
+        .themed-bg {
+            background-color: #1d1d1d;
+            /* Brooklyn Nets blue */
+        }
+
+        /* Responsive adjustments for Samsung Galaxy M31 */
+        @media screen and (max-width: 600px) {
+            nav {
+                flex-wrap: wrap;
+                padding: 5px 0;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .footer {
+                font-size: 10px;
+                text-align: center;
+            }
+
+            .player-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .player-tab {
+                margin: 5px;
+                width: 100%;
+            }
+
+            .player-tab img {
+                max-width: 80px;
+            }
+
+            .player-content {
+                padding: 10px;
+            }
+
+            .player-stats {
+                margin-top: 10px;
+            }
+
+            .player-highlights iframe {
+                width: 100%;
+            }
+
+            .social-links {
+                padding-left: 0;
+            }
+
+            .social-links li {
+                margin: 5px 0;
+            }
+
+            navp {
+                flex-wrap: wrap;
+                padding: 5px 0;
+                font-size: 18px;
+                /* Adjust the font size as needed */
+            }
+
+            .popup-menu {
+                font-size: 14px;
+                /* Adjust font size for smaller screens */
+            }
+
+        }
+
+        .player-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .player-tab {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        .player-tab img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        .player-tab:hover {
+            background-color: #ddd;
+        }
+
+        .active-player-tab {
+            background-color: orange;
+            color: #fff;
+            border-color: orange;
+        }
+
+        .player-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .player-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .player-button:hover {
+            background-color: #1d1d1d;
+        }
+
+        .popup-menu {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            z-index: 1;
+        }
+
+        .popup-menu a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 5px;
+            transition: color 0.3s;
+        }
+
+        .popup-menu a:hover {
+            color: orange;
+            text-decoration: underline;
+        }
+
+        button#playersButton {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button#playersButton:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>NETSFANUKR</h1>
+    </header>
+    <nav>
+        <a href="index.html">Головна сторінка</a>
+        <a href="news.html">Новини</a>
+        <button id="playersButton">Гравці</button>
+        <div id="playersMenu" class="popup-menu">
+            <a href="royce.html">Royce O`neal #00</a>
+            <a href="dariq.html">Dariq Whitehead #0</a>
+            <a href="mikal.html">Mikal Bridges #1</a>
+            <a href="cam.html">Cameron Johnson #2</a>
+            <a href="dennis.html">Dennis Smith Jr #4</a>
+            <a href="darius.html">Darius Bazley #7</a>
+            <a href="lonnie.html">Lonnie Walker IV #8</a>
+            <a href="trendon.html">Trendon Watford #9</a>
+            <a href="ben.html">Ben Simmons #10</a>
+            <a href="armoni.html">Armoni Brooks #13</a>
+            <a href="day.html">Day`Ron Sharpe #20</a>
+            <a href="noah.html">Noah Clowney #21</a>
+            <a href="jalen.html">Jalen Wilson #22</a>
+            <a href="camt.html">Cam Thomas #24</a>
+            <a href="spencer.html">Spencer Dinwiddie #26</a>
+            <a href="dorian.html">Dorian Finney-Smith #28</a>
+            <a href="nic.html">Nicolas Claxton #33</a>
+        </div>
+        <a href="schedule.html">Розклад</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="contact.html">Контакт</a>
+    </nav>
+    <navp>
+        <p><strong>SPENCER DINWIDDIE</strong></p>
+    </navp>
+    <div class="container">
+        <div class="content">
+            <div class="player-info">
+                <img src="spencerprofile.png" alt="Spencer Dinwiddie"
+                    style="max-width: 100%; height: auto; margin-top: 10px;">
+
+                <p><strong>Позиція:</strong> Захисник</p>
+                <p><strong>Зріст:</strong> 6'5" (1.96 м)</p>
+                <p><strong>Вага:</strong> 215lb (98 кг)</p>
+                <p><strong>Дата народження:</strong> Квітень 6, 1993</p>
+                <p><strong>Країна:</strong> США</p>
+                <p><strong>Вік:</strong> 30 рік</p>
+                <p><strong>Драфт:</strong> 2014 Раунд 2 Пік 38</p>
+                <p><strong>Останній відвіданий заклад:</strong> Університет Колорадо</p>
+                <p><strong>Досвід:</strong> 9 роки</p>
+
+                <h4>Біографія</h4>
+                <h3>ПРОФЕСІЙНА КАР'ЄРА</h3>
+                <h2>Детройт Пістонс (2014–2016)</h2>
+                <p>Дінвідді був обраний 38-м загальним піком командою Детройт Пістонс на драфті НБА 2014 року.У своєму
+                    роківнику він з'явився в 34 матчах за Пістонс, зробивши один старт і отримавши дві надіслання до
+                    Grand Rapids Drive, афілійованої команди Детройт Пістонс у D-League. Його єдиний старт відбувся 20
+                    лютого 2015 року після двох обмінів, які залишили Пістонс бездоганними. Він досяг кар'єрного
+                    максимуму з 12 очок і дев'ятьох асистентів у перемозі 100–91 над Chicago Bulls. Через вісім днів він
+                    набрав сезонний рекорд з 20 очок, разом із восьми асистентами за 25 хвилин, виходячи з лавки в
+                    поразці 99–95 від Washington Wizards.</p>
+
+                <p>Сезон 2015–16 року був для Дінвідді лише участю у 12 регулярних сезонних матчах за Пістонс, після
+                    того як він провів більшу частину сезону в D-League разом із Grand Rapids Drive. Після того як
+                    запасний гравець Стів Блейк почав сезон у жахливій забивці,[19] Дінвідді отримав свій перший шанс у
+                    сезоні в десятій грі, де він набрав 17 очок 15 листопада у поразці 97–85 від Los Angeles Lakers.
+                    Однак після труднощів у наступних чотирьох матчах, він вибув з команди, погіршивши його ротацію,
+                    посилюючи покращення форми Блейка і повернення Брендона Дженнінгса після травми. Дінвідді провів
+                    найбільше хвилин в сезонному фіналі Пістонс 13 квітня, набравши 12 очок у перемозі 112–110 після
+                    подовження над Cleveland Cavaliers. Потім він з'явився в другій грі серії плей-офф Пістонс 4–0 від
+                    Cavaliers.</p>
+
+                <h2>Windy City Bulls (2016)</h2>
+                <p>17 червня 2016 року Дінвідді був обміняний на Chicago Bulls у обмін на Камерона Баїрстоу. Він був
+                    відсторонений від Bulls 7 липня, підписав новий контракт 28 липня, і відпущений 21 жовтня після
+                    участі в п'яти попередньосезонних матчах. Потім він провів початок сезону 2016–17 разом із
+                    афілійованою командою Чикаго D-League, Windy City Bulls, в середньому набираючи 19,4 очки, 8,1
+                    асистентів і 3,7 підбирання за 37,4 хвилини в дев'яти матчах.</p>
+
+                <h2>Бруклін Нетс (2016–2021)</h2>
+                <p>8 грудня 2016 року Дінвідді підписав контракт з командою Бруклін Нетс. 15 лютого 2017 року він набрав
+                    15 із свого сезонного максимуму з 19 очок у четвертій чверті поразки Нетс 129–125 від Milwaukee
+                    Bucks. 8 квітня 2017 року, у перемозі 107–106 над Chicago Bulls, Дінвідді забив чотири безкоштовних
+                    кидка за останні 13,6 секунди і завершив гру з 19 очками. 25 жовтня 2017 року Дінвідді встановив
+                    кар'єрний рекорд з 22 очок і забив вирішальний триочковий кидок через 43 секунди, що залишило Нетс
+                    переможцем у матчі 112–107 над Cleveland Cavaliers. 29 жовтня він вирівняв свій кар'єрний рекорд з
+                    22 очками у поразці 124–111 від Denver Nuggets. 17 листопада він встановив новий кар'єрний рекорд з
+                    25 очками у перемозі 118–107 над Utah Jazz. 14 грудня він набрав 26 очків у поразці 111–104 від New
+                    York Knicks. 23 грудня він вирівняв свій кар'єрний рекорд з 26 очками у поразці 123–119 після
+                    подовження від Indiana Pacers. 3 січня 2018 року він забив переможний кидок за 10,1 секунди до кінця
+                    матчу і вирівняв свій кар'єрний рекорд з 26 очками, приводячи Бруклін до перемоги 98–97 над
+                    Minnesota Timberwolves. 8 січня він встановив новий кар'єрний рекорд з 31 очками у поразці 114–113
+                    від Toronto Raptors. 12 січня він зареєстрував практично трипл-дабл з 20 очками, 10 асистентами і
+                    дев'ятьма підбираннями у перемозі 110–105 над Atlanta Hawks. 17 січня він здійснив новий кар'єрний
+                    рекорд з 13 асистентами у поразці 100–95 від San Antonio Spurs. 17 лютого Дінвідді переміг в Skills
+                    Challenge на Вікенді всіх зірок. 25 листопада 2018 року Дінвідді набрав 31 очок у поразці 127–125
+                    від Philadelphia 76ers. 12 грудня він забив кар'єрний рекорд з 39 очками у перемозі 127–124 від
+                    76ers. 13 грудня він підписав звіт про продовження контракту на 3 роки на 34 мільйони доларів з
+                    Нетс. 26 грудня він набрав 37 очок і 11 асистентів з лавки у подвійному подовженні перемоги 134–132
+                    від Charlotte Hornets. Це була його третя гра на 30 очок з лавки, встановивши рекорд клубу,
+                    встановлений Кліффордом Т. Робінсоном в сезоні 1980–81 року. 16 січня 2019 року він забив 25 з 33
+                    своїх очок у четвертій чверті та подовженні перемоги Нетс 145–142 від Houston Rockets. 23 січня він
+                    забив груповий рекорд з 29 очками у перемозі 114–110 від Orlando Magic, таким чином набравши
+                    принаймні 25 очок з лавки в 10 матчах, зрівнюючи рекорд за один сезон – Баблз Гокінс встановив цей
+                    показник під час першого сезону Нетс у НБА в 1976–77 році. Два дні потому було розкрито, що травма
+                    правого великого пальця, яку він спочатку отримав близько два місяці тому і яка поступово
+                    погіршувалася, потребує операції через розрив зв'язок. Операцію він переніс 28 січня. Він повернувся
+                    до дії 1 березня після 14 пропущених ігор, набравши 15 очок з лавки у поразці 123–112 від Hornets. З
+                    28 очками проти Cavaliers 6 березня Дінвідді мав 14-й матч на 20 очок з лавки та встановив рекорд
+                    Нетс за один сезон – Дерріл Докінс, Первіс Шорт і Орландо Вулрідж всі мали 13. З 23 очками проти
+                    Hawks 9 березня Дінвідді перевершив Армена Гілліама в 1993–94 році з найбільшою кількістю очок за
+                    один сезон в резерві.</p>
+
+                <p>Протягом сезону 2019–20 року Дінвідді почав сезон як резервний до травми Кайрі Ірвінга. 28 січня 2020
+                    року Дінвідді змінив свій номер майки з 8 на 26 після схвалення НБА, на честь покійного Кобе
+                    Браянта. 29 червня 2020 року Дінвідді оголосив, що він пройшов позитивний тест на COVID-19.</p>
+
+                <p>27 грудня 2020 року Дінвідді залишив гру між Нетс і Charlotte Hornets з підозрою на напругу правого
+                    коліна, яка пізніше виявилася частковим розривом хряща ACL, завершивши сезон.</p>
+
+                <h2>Вашингтон Візардс (2021–2022)</h2>
+                <p>6 серпня 2021 року Дінвідді був придбаний Вашингтон Візардс за допомогою угоди про підписання та
+                    обмін, включаючи п'ять команд, яка вислала Рассела Вестбрука до Лос-Анджелес Лейкерс. Дінвідді
+                    підписав трьохрічний контракт на 54 мільйони доларів і максимум 60 мільйонів доларів через стимули.
+                    Він зробив свій дебют у Візардс 20 жовтня, набравши 13 очок, чотири підбирання і шість асистентів у
+                    перемозі 98–83 від Toronto Raptors. 22 жовтня Дінвідді набрав 34 очки, разом із шістьма підбираннями
+                    і дев'ятьма асистентів, у перемозі 135–134 після подовження від Indiana Pacers.</p>
+
+                <h2>Даллас Маверікс (2022–2023)</h2>
+                <p>10 лютого 2022 року Дінвідді був обмінений разом із Дейвісом Бертансом на Даллас Маверікс у обмін на
+                    Крістапса Порзіньгіса та захищений вибір другого раунду 2022 року. 5 березня Дінвідді забив сезонний
+                    максимум 36 очок у перемозі 114–113 від Sacramento Kings. 16 квітня, під час гри 1 першого раунду
+                    плей-офф, він забив 22 очки і віддав вісім асистентів у поразці 93–99 від Utah Jazz. Маверікс
+                    виграли серію в шість матчів і зіткнулися з Phoenix Suns у другому раунді. 15 травня Дінвідді
+                    записав 30 очок, три підбирання і дві асистенти у перемозі 123–90 у грі 7 перемоги над першосінних
+                    Suns. Маверікс вийшли до Західної конференції вперше з 2011 року і зіткнулися з Golden State
+                    Warriors. Однак, Warriors вилучили Маверікс в п'яти матчах, незважаючи на 26 очок, чотири асистенти
+                    і два блокування Дінвідді в поразці 120–110 у грі 5.</p>
+
+                <p>10 листопада 2022 року Дінвідді набрав 33 очки, разом із чотирма підбираннями і шістьма асистентами,
+                    у поразці 113–105 від Washington Wizards. 26 січня 2023 року він забив сезонний максимум 36 очок,
+                    разом із шістьма підбираннями і дев'ятьма асистентами, у перемозі 99–95 від Phoenix Suns. Два дні
+                    потому Дінвідді записав 35 очок, чотири підбирання і вісім асистентів у поразці 108–100 від Utah
+                    Jazz.</p>
+
+                <h2>Повернення до Брукліна (2023–нині)</h2>
+                <p>6 лютого 2023 року Дінвідді був обмінений назад до Бруклін Нетс разом із Доріаном Фінні-Смітом,
+                    неохороненим вибором першого раунду 2029 року та виборами другого раунду 2027 і 2029 років, у обмін
+                    на Кайрі Ірвінга та Маркіфа Морріса.</p>
+                <h4>Статистика кар'єри</h4>
+                <table class="player-stats">
+                    <tr>
+                        <td>PPG:</td>
+                        <td>13.8</td>
+                    </tr>
+                    <tr>
+                        <td>APG:</td>
+                        <td>5.3</td>
+                    </tr>
+                    <tr>
+                        <td>RPG:</td>
+                        <td>3.1</td>
+                    </tr>
+                    <tr>
+                        <td>BLK:</td>
+                        <td>0.3</td>
+                    </tr>
+                    <tr>
+                        <td>STL:</td>
+                        <td>0.7</td>
+                    </tr>
+                    <tr>
+                        <td>MIN:</td>
+                        <td>27.7</td>
+                    </tr>
+                </table>
+
+                <h4>Досягнення</h4>
+                <ul>
+                    <li>Перша команда All-Pac-12 (2013)</li>
+                    
+                </ul>
+
+                <h4>Яскраві моменти гравця</h4>
+                <div class="player-highlights">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Dn6SqTuCDYA?si=dnaDz87QGZRv18Aj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+
+                <h4>Соціальні мережі</h4>
+                <ul class="social-links">
+                    <li><a href="https://twitter.com/SDinwiddie_25" target="_blank">Твітер</a></li>
+                    <li><a href="https://www.instagram.com/spencerdinwiddie/?hl=uk" target="_blank">Інстаграм</a></li>
+                    <!-- Add more social media links here -->
+                </ul>
+            </div>
+
+            <!-- Additional content about John Doe can go here -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 NETSFANUKR. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("playersButton").addEventListener("click", function () {
+            var playersMenu = document.getElementById("playersMenu");
+
+            if (playersMenu.style.display === "block") {
+                playersMenu.style.display = "none";
+            } else {
+                playersMenu.style.display = "block";
+            }
+        });
+
+        // Close the menu if user clicks outside of it
+        window.addEventListener("click", function (event) {
+            var playersMenu = document.getElementById("playersMenu");
+            var playersButton = document.getElementById("playersButton");
+
+            if (event.target !== playersMenu && event.target !== playersButton) {
+                playersMenu.style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>
