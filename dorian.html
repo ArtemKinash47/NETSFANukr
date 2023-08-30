@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETSFANUKR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #222;
+            padding: 10px 0;
+        }
+
+        navp {
+            display: flex;
+            justify-content: center;
+            background-color: #1d1d1d;
+            padding: 10px 0;
+            color: #fff;
+            font-size: 40px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: orange;
+        }
+
+        .container {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+
+        /* Themed background color */
+        .themed-bg {
+            background-color: #1d1d1d;
+            /* Brooklyn Nets blue */
+        }
+
+        /* Responsive adjustments for Samsung Galaxy M31 */
+        @media screen and (max-width: 600px) {
+            nav {
+                flex-wrap: wrap;
+                padding: 5px 0;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .footer {
+                font-size: 10px;
+                text-align: center;
+            }
+
+            .player-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .player-tab {
+                margin: 5px;
+                width: 100%;
+            }
+
+            .player-tab img {
+                max-width: 80px;
+            }
+
+            .player-content {
+                padding: 10px;
+            }
+
+            .player-stats {
+                margin-top: 10px;
+            }
+
+            .player-highlights iframe {
+                width: 100%;
+            }
+
+            .social-links {
+                padding-left: 0;
+            }
+
+            .social-links li {
+                margin: 5px 0;
+            }
+
+            navp {
+                flex-wrap: wrap;
+                padding: 5px 0;
+                font-size: 18px;
+                /* Adjust the font size as needed */
+            }
+
+            .popup-menu {
+                font-size: 14px;
+                /* Adjust font size for smaller screens */
+            }
+
+        }
+
+        .player-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .player-tab {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        .player-tab img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        .player-tab:hover {
+            background-color: #ddd;
+        }
+
+        .active-player-tab {
+            background-color: orange;
+            color: #fff;
+            border-color: orange;
+        }
+
+        .player-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .player-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .player-button:hover {
+            background-color: #1d1d1d;
+        }
+
+        .popup-menu {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            z-index: 1;
+        }
+
+        .popup-menu a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 5px;
+            transition: color 0.3s;
+        }
+
+        .popup-menu a:hover {
+            color: orange;
+            text-decoration: underline;
+        }
+
+        button#playersButton {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button#playersButton:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>NETSFANUKR</h1>
+    </header>
+    <nav>
+        <a href="index.html">Головна сторінка</a>
+        <a href="news.html">Новини</a>
+        <button id="playersButton">Гравці</button>
+        <div id="playersMenu" class="popup-menu">
+            <a href="royce.html">Royce O`neal #00</a>
+            <a href="dariq.html">Dariq Whitehead #0</a>
+            <a href="mikal.html">Mikal Bridges #1</a>
+            <a href="cam.html">Cameron Johnson #2</a>
+            <a href="dennis.html">Dennis Smith Jr #4</a>
+            <a href="darius.html">Darius Bazley #7</a>
+            <a href="lonnie.html">Lonnie Walker IV #8</a>
+            <a href="trendon.html">Trendon Watford #9</a>
+            <a href="ben.html">Ben Simmons #10</a>
+            <a href="armoni.html">Armoni Brooks #13</a>
+            <a href="day.html">Day`Ron Sharpe #20</a>
+            <a href="noah.html">Noah Clowney #21</a>
+            <a href="jalen.html">Jalen Wilson #22</a>
+            <a href="camt.html">Cam Thomas #24</a>
+            <a href="spencer.html">Spencer Dinwiddie #26</a>
+            <a href="dorian.html">Dorian Finney-Smith #28</a>
+            <a href="nic.html">Nicolas Claxton #33</a>
+        </div>
+        <a href="schedule.html">Розклад</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="contact.html">Контакт</a>
+    </nav>
+    <navp>
+        <p><strong>DORIAN FINNEY-SMITH</strong></p>
+    </navp>
+    <div class="container">
+        <div class="content">
+            <div class="player-info">
+                <img src="dorianprofile.png" alt="DORIAN FINNEY-SMITH"
+                    style="max-width: 100%; height: auto; margin-top: 10px;">
+
+                <p><strong>Позиція:</strong> Форвард</p>
+                <p><strong>Зріст:</strong> 6'7" (2.01 м)</p>
+                <p><strong>Вага:</strong> 220lb (100 кг)</p>
+                <p><strong>Дата народження:</strong> Травень 4, 1993</p>
+                <p><strong>Країна:</strong> США</p>
+                <p><strong>Вік:</strong> 30 років</p>
+                <p><strong>Драфт:</strong> Незадрафтований</p>
+                <p><strong>Останній відвіданий заклад:</strong> Університет Флориди</p>
+                <p><strong>Досвід:</strong> 7 років</p>
+
+                <h4>Біографія</h4>
+                <h3>ПРОФЕСІЙНА КАР'ЄРА</h3>
+                <h2>Даллас Маверікс (2016–2023)</h2>
+<h2>2016–2019: Початкові роки</h2>
+<p>Після того як він залишився невибраним на драфті НБА 2016 року, Фінні-Сміт підписав контракт з Даллас Маверікс 8 липня і приєднався до команди для літньої ліги НБА 2016 року. Фінні-Сміт забезпечив собі місце в основі заявки на відкритті сезону після вражаючого враження на Маверікс під час тренувального табору і передсезонних матчів. Після того, як він провів менше п'яти хвилин в сумі на протязі перших п'яти ігор сезону 2016–17, Фінні-Сміт провів 31 хвилину 6 листопада проти Мілуокі Бакс, включаючи більшу частину другого тайму і додатковий час. Він подальше записав п'ять очок, три підбирання, три відбирання і один блок в перемозі з рахунком 86–75. Два дні потому він вперше в кар'єрі вийшов на стартовий склад, набравши п'ять очок у перемозі з рахунком 109–97 над Лос-Анджелес Лейкерс. 9 грудня він зіграв найкращий матч сезону з особистими рекордами в кар'єрі 12 очок і вісім підбирань у перемозі з рахунком 111–103 над Індіана Пейсерс. 12 грудня він встановив нові особисті рекорди за кількістю очок і підбирань на другій підрядній домашній грі, набравши 13 очок і дев'ять підбирань у перемозі з рахунком 112–92 над Денвер Наггетс.</p>
+
+<p>10 березня 2018 року Фінні-Сміт вийшов на поле вперше з листопада 2017 року після пропуску 51 матча поспіль і загалом 57 через тендініт квадрицепса лівого коліна. Він набрав 7 очок за 18 хвилин у перемозі Маверікс з рахунком 114–80 над Мемфіс Гріззліз. 6 квітня він встановив сезонні рекорди 15 очок і 10 підбирань у втраті в овертаймі з рахунком 113–106 від Детройт Пістонс.</p>
+
+<p>2 листопада 2018 року Фінні-Сміт набрав рекордний для сезону 19 очок, а також 7 підбирань, 2 передачі і 2 відбир. у поразці з рахунком 118–106 від Нью-Йорк Нікс.</p>
+
+<h2>2019–2023: Роль стартового гравця та продовження контракту</h2>
+<p>11 липня 2019 року Фінні-Сміт підписав новий контракт з Маверікс на 3 роки на суму 12 мільйонів доларів. 18 листопада він набрав тодішній особистий рекорд 22 очки у перемозі з рахунком 117–110 над Сан-Антоніо Сперс. 4 серпня 2020 року Фінні-Сміт взяв рекордні 16 підбирань у перемозі з рахунком 114–110 над Сакраменто Кінгз. 8 серпня він набрав тодішній особистий рекорд 27 очок і особистий рекорд 6 трьохочкових у перемозі з рахунком 136–132 проти Мілуокі Бакс. Маверікс вийшли до плей-оф, вперше з 2016 року, і зіткнулися з Лос-Анджелес Кліпперс у першому раунді. Фінні-Сміт зробив свій дебют у плей-оф 17 серпня, набравши 9 очок, 4 підбирання, 2 передачі і 2 відбир. у поразці з рахунком 118–110 у грі №1. Маверікс були в кінцевому підсумку вилучені в шести матчах Кліпперс.</p>
+
+<p>5 квітня 2021 року Фінні-Сміт встановив сезонний рекорд 23 очки, а також 6 підбирань і 4 передачі, у перемозі з рахунком 111–103 над Юта Джаз. Вдруге поспіль Маверікс зіткнулися з Кліпперс у першому раунді плей-оф. 22 травня Фінні-Сміт набрав 18 очок і 5 підбирань у перемозі з рахунком 113–103 у грі №1. Маверікс були вилучені Кліпперс в сімох матчах, незважаючи на 18 очок і 10 підбирань Фінні-Сміта в поразці Маверікс 126–111 у грі №7.</p>
+
+<p>12 лютого 2022 року Фінні-Сміт підписав 4-річне продовження контракту на 52 мільйони доларів з Маверікс. 30 березня він набрав кар'єрний рекорд 28 очок у перемозі з рахунком 120–112 над Клівленд Кавалірс. Маверікс перемогли Юта Джаз у першому раунді плей-оф і вийшли до серії з Фінікс Санс у другому раунді. 8 травня в матчі №4 серії з Санс Фінні-Сміт набрав плей-офні рекордні 24 очки, а також зробив 8 трьохочкових і 8 підбирань, у перемозі з рахунком 111–101. Маверікс перемогли Санс у семи матчах, але були вилучені з п'ятиматчевої серії в Західній конференції Голден Стейт Ворріорс, які виграли фінал НБА. У грі №4 Конференційного фіналу Фінні-Сміт набрав 23 очки, 6 підбирань і 2 передачі у перемозі з рахунком 119–109. </p>
+
+<h2>Бруклін Нетс (2023–нині)</h2>
+<p>6 лютого 2023 року Фінні-Сміт був обмінений разом із Спенсером Дінвідді, незахищеним вибором першого раунду 2029 року та виборами другого раунду 2027 та 2029 року, на Бруклін Нетс в обмін на Кайрі Ірвінга та Маркіфа Морріса.</p>
+                <h4>Статистика кар'єри</h4>
+                <table class="player-stats">
+                    <tr>
+                        <td>PPG:</td>
+                        <td>8.2</td>
+                    </tr>
+                    <tr>
+                        <td>APG:</td>
+                        <td>1.4</td>
+                    </tr>
+                    <tr>
+                        <td>RPG:</td>
+                        <td>4.6</td>
+                    </tr>
+                    <tr>
+                        <td>BLK:</td>
+                        <td>0.4</td>
+                    </tr>
+                    <tr>
+                        <td>STL:</td>
+                        <td>0.8</td>
+                    </tr>
+                    <tr>
+                        <td>MIN:</td>
+                        <td>27.8</td>
+                    </tr>
+                </table>
+
+                <h4>Досягнення</h4>
+                <ul>
+                    <li>2 рази визнаний другою збірною командою All-SEC (2015, 2016)</li>
+                    <li>Шостий гравець року SEC (2014)</li>
+                    <li>Команда ACC для першорічників (2012)</li>
+                    
+                </ul>
+
+                <h4>Яскраві моменти гравця</h4>
+                <div class="player-highlights">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/W8Xt1us7D84?si=48wk91ZNoNTzPcrq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                </div>
+
+                <h4>Соціальні мережі</h4>
+                <ul class="social-links">
+                    <li><a href="https://twitter.com/doefinney_10" target="_blank">Твітер</a></li>
+                    <li><a href="https://www.instagram.com/doedoe_10/" target="_blank">Інстаграм</a></li>
+                    <!-- Add more social media links here -->
+                </ul>
+            </div>
+
+            <!-- Additional content about John Doe can go here -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 NETSFANUKR. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("playersButton").addEventListener("click", function () {
+            var playersMenu = document.getElementById("playersMenu");
+
+            if (playersMenu.style.display === "block") {
+                playersMenu.style.display = "none";
+            } else {
+                playersMenu.style.display = "block";
+            }
+        });
+
+        // Close the menu if user clicks outside of it
+        window.addEventListener("click", function (event) {
+            var playersMenu = document.getElementById("playersMenu");
+            var playersButton = document.getElementById("playersButton");
+
+            if (event.target !== playersMenu && event.target !== playersButton) {
+                playersMenu.style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>
