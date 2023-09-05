@@ -282,7 +282,12 @@ button#scheduleButton:hover {
             <a href="dorian.html">Dorian Finney-Smith #28</a>
             <a href="nic.html">Nicolas Claxton #33</a>
         </div>
-        <a href="schedule.html">Розклад</a>
+        <button id="scheduleButton">Розклад</button>
+        <div id="scheduleMenu" class="popup-menu">
+            <a href="preseason.html">Передсезон</a>
+            <a href="tournament.html">Сезонний Турнір</a>
+            <a href="season.html">Сезон 2023/2024</a>
+        </div>
         <a href="gallery.html">Галерея</a>
         <a href="contact.html">Контакт</a>
     </nav>
@@ -471,6 +476,7 @@ button#scheduleButton:hover {
     </footer>
 
     <script>
+        
         document.getElementById("playersButton").addEventListener("click", function() {
             var playersMenu = document.getElementById("playersMenu");
             
@@ -481,6 +487,16 @@ button#scheduleButton:hover {
             }
         });
         
+        document.getElementById("scheduleButton").addEventListener("click", function() {
+            var scheduleMenu = document.getElementById("scheduleMenu");
+            
+            if (scheduleMenu.style.display === "block") {
+                scheduleMenu.style.display = "none";
+            } else {
+                scheduleMenu.style.display = "block";
+            }
+        });
+    
         // Close the menu if user clicks outside of it
         window.addEventListener("click", function(event) {
             var playersMenu = document.getElementById("playersMenu");
@@ -490,6 +506,16 @@ button#scheduleButton:hover {
                 playersMenu.style.display = "none";
             }
         });
+        
+        window.addEventListener("click", function(event) {
+            var scheduleMenu = document.getElementById("scheduleMenu");
+            var scheduleButton = document.getElementById("scheduleButton");
+            
+            if (event.target !== scheduleMenu && event.target !== scheduleButton) {
+                scheduleMenu.style.display = "none";
+            }
+        });
+    
         </script>
 </body>
 
