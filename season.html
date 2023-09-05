@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NETSFANUKR</title>
     <style>
-         body {
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -16,9 +17,9 @@
         }
 
         .content img {
-                width: 50px;
-                height: auto;
-            }
+            width: 50px;
+            height: auto;
+        }
 
         header {
             background-color: #333;
@@ -68,7 +69,8 @@
 
         /* Themed background color */
         .themed-bg {
-            background-color: #1d1d1d; /* Brooklyn Nets blue */
+            background-color: #1d1d1d;
+            /* Brooklyn Nets blue */
         }
 
         /* Responsive adjustments for Samsung Galaxy M31 */
@@ -86,7 +88,7 @@
                 padding: 10px;
             }
 
-            .footer{
+            .footer {
                 font-size: 10px;
                 text-align: center;
             }
@@ -97,107 +99,117 @@
             }
 
             .popup-menu {
-        font-size: 14px; /* Adjust font size for smaller screens */
-    }
+                font-size: 14px;
+                /* Adjust font size for smaller screens */
+            }
 
-    
-    table th, table td {
-        padding: 8px; /* Reduce padding for smaller screens */
-    }
 
-    table td img {
-        max-width: 30px; /* Adjust the maximum width of logos for smaller screens */
-    }
+            table th,
+            table td {
+                padding: 8px;
+                /* Reduce padding for smaller screens */
+                white-space: initial;
+                /* Allow text to wrap */
+                overflow: visible;
+                text-overflow: initial;
+            }
+
+            table td img {
+                max-width: 30px;
+                /* Adjust the maximum width of logos for smaller screens */
+            }
 
 
         }
 
         .popup-menu {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    padding: 10px;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    z-index: 1;
-}
+            display: none;
+            position: absolute;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            z-index: 1;
+        }
 
-.popup-menu a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    margin-bottom: 5px;
-    transition: color 0.3s;
-}
+        .popup-menu a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 5px;
+            transition: color 0.3s;
+        }
 
-.popup-menu a:hover {
-    color: orange;
-    text-decoration: underline;
-}
+        .popup-menu a:hover {
+            color: orange;
+            text-decoration: underline;
+        }
 
-button#playersButton {
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
+        button#playersButton {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
 
-button#playersButton:hover {
-    text-decoration: underline;
-}
+        button#playersButton:hover {
+            text-decoration: underline;
+        }
 
-button#scheduleButton {
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
+        button#scheduleButton {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
 
-button#scheduleButton:hover {
-    text-decoration: underline;
-}
+        button#scheduleButton:hover {
+            text-decoration: underline;
+        }
 
-/* Style for the schedule table */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
+        /* Style for the schedule table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
 
-table th,
-table td {
-    padding: 12px;
-    text-align: left;
-}
+        table th,
+        table td {
+            padding: 12px;
+            text-align: left;
+        }
 
-table th {
-    background-color: #333;
-    color: white;
-}
+        table th {
+            background-color: #333;
+            color: white;
+        }
 
-table tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
+        table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
 
-table tbody tr:hover {
-    background-color: #ddd;
-}
+        table tbody tr:hover {
+            background-color: #ddd;
+        }
 
-/* Style for the logo column */
-table td img {
-    max-width: 40px; /* Adjust the maximum width of the logos */
-    height: auto;
-    display: block;
-    margin: 0 auto; /* Center align the logos */
-}
-
+        /* Style for the logo column */
+        table td img {
+            max-width: 40px;
+            /* Adjust the maximum width of the logos */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            /* Center align the logos */
+        }
     </style>
 </head>
+
 <body class="themed-bg">
     <header>
         <h1>NETSFANUKR</h1>
@@ -251,11 +263,11 @@ table td img {
                 </thead>
                 <tbody>
                     <tr>
-                        <td> Середа, Жовтень 25   </td>
-                        <td>   02:30   </td>
-                        <td>   Клівленд Кавалірс   </td>
+                        <td> Середа, Жовтень 25 </td>
+                        <td> 02:30 </td>
+                        <td> Клівленд Кавалірс </td>
                         <td><img src="cleveland.png" alt="LA Lakers"></td>
-                        <td>   Barclays Center   </td>
+                        <td> Barclays Center </td>
                     </tr>
                     <tr>
                         <td> П'ятниця, Жовтень 27 </td>
@@ -783,7 +795,7 @@ table td img {
                         <td> Wells Fargo Center </td>
                     </tr>
 
-                    
+
                     <!-- Add more schedule entries as needed -->
                 </tbody>
             </table>
@@ -793,46 +805,47 @@ table td img {
         <p>&copy; 2023 NETSFANUKR. All rights reserved.</p>
     </footer>
     <script>
-        
-    document.getElementById("playersButton").addEventListener("click", function() {
-        var playersMenu = document.getElementById("playersMenu");
-        
-        if (playersMenu.style.display === "block") {
-            playersMenu.style.display = "none";
-        } else {
-            playersMenu.style.display = "block";
-        }
-    });
-    
-    document.getElementById("scheduleButton").addEventListener("click", function() {
-        var scheduleMenu = document.getElementById("scheduleMenu");
-        
-        if (scheduleMenu.style.display === "block") {
-            scheduleMenu.style.display = "none";
-        } else {
-            scheduleMenu.style.display = "block";
-        }
-    });
 
-    // Close the menu if user clicks outside of it
-    window.addEventListener("click", function(event) {
-        var playersMenu = document.getElementById("playersMenu");
-        var playersButton = document.getElementById("playersButton");
-        
-        if (event.target !== playersMenu && event.target !== playersButton) {
-            playersMenu.style.display = "none";
-        }
-    });
-    
-    window.addEventListener("click", function(event) {
-        var scheduleMenu = document.getElementById("scheduleMenu");
-        var scheduleButton = document.getElementById("scheduleButton");
-        
-        if (event.target !== scheduleMenu && event.target !== scheduleButton) {
-            scheduleMenu.style.display = "none";
-        }
-    });
+        document.getElementById("playersButton").addEventListener("click", function () {
+            var playersMenu = document.getElementById("playersMenu");
+
+            if (playersMenu.style.display === "block") {
+                playersMenu.style.display = "none";
+            } else {
+                playersMenu.style.display = "block";
+            }
+        });
+
+        document.getElementById("scheduleButton").addEventListener("click", function () {
+            var scheduleMenu = document.getElementById("scheduleMenu");
+
+            if (scheduleMenu.style.display === "block") {
+                scheduleMenu.style.display = "none";
+            } else {
+                scheduleMenu.style.display = "block";
+            }
+        });
+
+        // Close the menu if user clicks outside of it
+        window.addEventListener("click", function (event) {
+            var playersMenu = document.getElementById("playersMenu");
+            var playersButton = document.getElementById("playersButton");
+
+            if (event.target !== playersMenu && event.target !== playersButton) {
+                playersMenu.style.display = "none";
+            }
+        });
+
+        window.addEventListener("click", function (event) {
+            var scheduleMenu = document.getElementById("scheduleMenu");
+            var scheduleButton = document.getElementById("scheduleButton");
+
+            if (event.target !== scheduleMenu && event.target !== scheduleButton) {
+                scheduleMenu.style.display = "none";
+            }
+        });
 
     </script>
 </body>
+
 </html>
