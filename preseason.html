@@ -99,6 +99,15 @@
             .popup-menu {
         font-size: 14px; /* Adjust font size for smaller screens */
     }
+
+    table th, table td {
+        padding: 5px; /* Further reduced padding for smaller screens */
+    }
+
+    table td img {
+        max-width: 20px; /* Adjust the maximum width of the logos for smaller screens */
+    }
+    
         }
 
         .popup-menu {
@@ -176,6 +185,13 @@ table tbody tr:hover {
     background-color: #ddd;
 }
 
+table td img {
+    max-width: 40px; /* Adjust the maximum width of the logos */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center align the logos */
+}
+
 
     </style>
 </head>
@@ -226,6 +242,7 @@ table tbody tr:hover {
                         <th>Дата</th>
                         <th>Час</th>
                         <th>Суперник</th>
+                        <th></th>
                         <th>Місце проведення</th>
                     </tr>
                 </thead>
@@ -234,68 +251,35 @@ table tbody tr:hover {
                         <td> Понеділок, Жовтень 9   </td>
                         <td>   04:00   </td>
                         <td>   @ Лос Анджелес Лейкерс   </td>
+                        <td><img src="lakers.png" alt="LA Lakers"></td>
                         <td>   T-Mobile Arena   </td>
                     </tr>
                     <tr>
                         <td> Четвер, Жовтень 12 </td>
                         <td> 02:30 </td>
                         <td> Маккабі Раанана </td>
+                        <td><img src="makaba.png" alt="makaba"></td>
                         <td> Barclays Center </td>
                     </tr>
                     <tr>
                         <td> Понеділок, Жовтень 16 </td>
                         <td> 02:30 </td>
                         <td> Філадельфія 76ерс </td>
+                        <td><img src="76ers.png" alt="76ers"></td>
                         <td> Barclays Center </td>
                     </tr>
                     <tr>
                         <td> Середа, Жовтень 18 </td>
                         <td> 02:30 </td>
                         <td> @ Маямі Хіт </td>
+                        <td><img src="miami.png" alt="Heat"></td>
                         <td> Kaseya Center </td>
                     </tr>
                     <!-- Add more schedule entries as needed -->
                 </tbody>
             </table>
 
-            <h2>Сезонний турнір</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Дата</th>
-                        <th>Час</th>
-                        <th>Суперник</th>
-                        <th>Місце проведення</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td> П'ятниця, Листопад 3   </td>
-                        <td>   03:00   </td>
-                        <td>   @ Чикаго Буллз   </td>
-                        <td>   United Center  </td>
-                    </tr>
-                    <tr>
-                        <td> П'ятниця, Листопад 10 </td>
-                        <td> 02:30 </td>
-                        <td> @ Бостон Селтікс </td>
-                        <td> TD Garden </td>
-                    </tr>
-                    <tr>
-                        <td> Вівторок, Листопад 14 </td>
-                        <td> 02:30 </td>
-                        <td> Орландо Меджик </td>
-                        <td> Barclays Center </td>
-                    </tr>
-                    <tr>
-                        <td> Вівторок, Листопад 28 </td>
-                        <td> 02:30 </td>
-                        <td> Торонто Рапторс </td>
-                        <td> Barclays Center </td>
-                    </tr>
-                    <!-- Add more schedule entries as needed -->
-                </tbody>
-            </table>
+            
         </div>
     </div>
     <footer>

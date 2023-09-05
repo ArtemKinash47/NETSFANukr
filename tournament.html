@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETSFANUKR</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content img {
+                width: 50px;
+                height: auto;
+            }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #222;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: orange;
+        }
+
+        .container {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+
+        /* Themed background color */
+        .themed-bg {
+            background-color: #1d1d1d; /* Brooklyn Nets blue */
+        }
+
+        /* Responsive adjustments for Samsung Galaxy M31 */
+        @media screen and (max-width: 600px) {
+            nav {
+                flex-wrap: wrap;
+                padding: 5px 0;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .footer{
+                font-size: 10px;
+                text-align: center;
+            }
+
+            .content img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .popup-menu {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    table th, table td {
+        padding: 5px; /* Further reduced padding for smaller screens */
+    }
+
+    table td img {
+        max-width: 20px; /* Adjust the maximum width of the logos for smaller screens */
+    }
+        }
+
+        .popup-menu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    z-index: 1;
+}
+
+.popup-menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.popup-menu a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+button#playersButton {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button#playersButton:hover {
+    text-decoration: underline;
+}
+
+button#scheduleButton {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button#scheduleButton:hover {
+    text-decoration: underline;
+}
+
+/* Style for the schedule table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #333;
+    color: white;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+    background-color: #ddd;
+}
+
+table td img {
+    max-width: 40px; /* Adjust the maximum width of the logos */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center align the logos */
+}
+
+
+    </style>
+</head>
+<body class="themed-bg">
+    <header>
+        <h1>NETSFANUKR</h1>
+    </header>
+    <nav>
+        <a href="index.html">Головна сторінка</a>
+        <a href="news.html">Новини</a>
+        <button id="playersButton">Гравці</button>
+        <div id="playersMenu" class="popup-menu">
+            <a href="royce.html">Royce O`neal #00</a>
+            <a href="dariq.html">Dariq Whitehead #0</a>
+            <a href="mikal.html">Mikal Bridges #1</a>
+            <a href="cam.html">Cameron Johnson #2</a>
+            <a href="dennis.html">Dennis Smith Jr #4</a>
+            <a href="darius.html">Darius Bazley #7</a>
+            <a href="lonnie.html">Lonnie Walker IV #8</a>
+            <a href="trendon.html">Trendon Watford #9</a>
+            <a href="ben.html">Ben Simmons #10</a>
+            <a href="armoni.html">Armoni Brooks #13</a>
+            <a href="day.html">Day`Ron Sharpe #20</a>
+            <a href="noah.html">Noah Clowney #21</a>
+            <a href="jalen.html">Jalen Wilson #22</a>
+            <a href="camt.html">Cam Thomas #24</a>
+            <a href="spencer.html">Spencer Dinwiddie #26</a>
+            <a href="dorian.html">Dorian Finney-Smith #28</a>
+            <a href="nic.html">Nicolas Claxton #33</a>
+        </div>
+        <button id="scheduleButton">Розклад</button>
+        <div id="scheduleMenu" class="popup-menu">
+            <a href="preseason.html">Передсезон</a>
+            <a href="tournament.html">Сезонний Турнір</a>
+            <a href="season.html">Сезон 2023/2024</a>
+        </div>
+        <a href="gallery.html">Галерея</a>
+        <a href="contact.html">Контакт</a>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <h2>Розклад матчів</h2>
+
+            
+            <h2>Сезонний турнір</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Час</th>
+                        <th>Суперник</th>
+                        <th></th>
+                        <th>Місце проведення</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> П'ятниця, Листопад 3   </td>
+                        <td>   03:00   </td>
+                        <td>   @ Чикаго Буллз   </td>
+                        <td><img src="chicago.png" alt="makaba"></td>
+                        <td>   United Center  </td>
+                    </tr>
+                    <tr>
+                        <td> П'ятниця, Листопад 10 </td>
+                        <td> 02:30 </td>
+                        <td> @ Бостон Селтікс </td>
+                        <td><img src="boston.png" alt="makaba"></td>
+                        <td> TD Garden </td>
+                    </tr>
+                    <tr>
+                        <td> Вівторок, Листопад 14 </td>
+                        <td> 02:30 </td>
+                        <td> Орландо Меджик </td>
+                        <td><img src="orlando.png" alt="makaba"></td>
+                        <td> Barclays Center </td>
+                    </tr>
+                    <tr>
+                        <td> Вівторок, Листопад 28 </td>
+                        <td> 02:30 </td>
+                        <td> Торонто Рапторс </td>
+                        <td><img src="toronto.png" alt="makaba"></td>
+                        <td> Barclays Center </td>
+                    </tr>
+                    <!-- Add more schedule entries as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 NETSFANUKR. All rights reserved.</p>
+    </footer>
+    <script>
+        
+    document.getElementById("playersButton").addEventListener("click", function() {
+        var playersMenu = document.getElementById("playersMenu");
+        
+        if (playersMenu.style.display === "block") {
+            playersMenu.style.display = "none";
+        } else {
+            playersMenu.style.display = "block";
+        }
+    });
+    
+    document.getElementById("scheduleButton").addEventListener("click", function() {
+        var scheduleMenu = document.getElementById("scheduleMenu");
+        
+        if (scheduleMenu.style.display === "block") {
+            scheduleMenu.style.display = "none";
+        } else {
+            scheduleMenu.style.display = "block";
+        }
+    });
+
+    // Close the menu if user clicks outside of it
+    window.addEventListener("click", function(event) {
+        var playersMenu = document.getElementById("playersMenu");
+        var playersButton = document.getElementById("playersButton");
+        
+        if (event.target !== playersMenu && event.target !== playersButton) {
+            playersMenu.style.display = "none";
+        }
+    });
+    
+    window.addEventListener("click", function(event) {
+        var scheduleMenu = document.getElementById("scheduleMenu");
+        var scheduleButton = document.getElementById("scheduleButton");
+        
+        if (event.target !== scheduleMenu && event.target !== scheduleButton) {
+            scheduleMenu.style.display = "none";
+        }
+    });
+
+    </script>
+</body>
+</html>
